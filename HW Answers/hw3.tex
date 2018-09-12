@@ -1,0 +1,357 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW3 ; Alexander Guo}}
+\date{}
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+\begin{enumerate}
+
+	\item
+
+	\begin{enumerate}[label=(\roman*)]
+
+	\item 
+
+a) The same number of letters in one's first name. Indeed true reflexively, as for \textit{a $\in$ S} then \textit{a $\sim$ a} since the letters in his own name is the same compared to himself. True symmetrically, since for persons \textit{a,b $\in$ S} we say that \textit{a $\sim$ b} if b has the same number of first name letters as a. Finally, this relation is true transitively for persons \textit{a,b,c $\in$ S} where we say that person a has the same letters in his first name as person c given that \textit{a $\sim$ b} and \textit{b $\sim$ c}. \\
+b) Same hair color. Indeed true reflexively, as for \textit{a $\in$ S} then \textit{a $\sim$ a} since the color of his hair is the same compared to himself. True symmetrically, since for persons \textit{a,b $\in$ S} we say that \textit{a $\sim$ b} if b has the same hair color as a. Finally, this relation is true transitively for persons \textit{a,b,c $\in$ S} where we say that person a has the same hair color as person c given that \textit{a $\sim$ b} and \textit{b $\sim$ c}. \\
+c) Same amount of current semester credit hours. Indeed true reflexively, as for \textit{a $\in$ S} then \textit{a $\sim$ a} since the credit hours he's taking is the same compared to himself. True symmetrically, since for persons \textit{a,b $\in$ S} we say that \textit{a $\sim$ b} if b is taking the same number of credit hours as a. Finally, this relation is true transitively for persons \textit{a,b,c $\in$ S} where we say that person a takes the same number of credit hours as person c given that \textit{a $\sim$ b} and \textit{b $\sim$ c}.
+	 
+	\item
+
+a) Attraction. Not necessarily reflexive, since a person might not be attracted to themselves. Therefore, a is not related to a, and this is not an equivalence relation. \\
+b) When the former's grade is higher than the latter. This is not true symmetrically, since for persons \textit{a,b $\in$ S}, \textit{a $\sim$ b} is different than \textit{b $\sim$ a}. The first one suggests that person a has a higher grade, but the second suggests that person b has the higher grade. This is not possible.\\
+c) Friendship. Not always transitively true. Person a could be friends with person b, and person b could be friends with person c. However, that doesn't mean person a will be friends with c.
+	
+	\item
+
+We know that this relation is an equivalence relation because it follows the three rules. Firstly, it is reflexive, which is self explanatory because it is the same as itself and is equal. Nextly, we know that the relation between the two is symmetrical. Since $x_1$ = $x_2$, the forward and reverse relation is true, maintaining that $(x_1,y_1) \sim (x_2,y_2)$. Finally, the relation is transitive, suggesting that $x_1 \sim x_3$, where $x_1 \sim x_2$ and $ x_2 \sim x_3$, which is true since all x's are equal.
+
+	\item
+
+We can easily prove that this is not an equivalence relation by checking the reflexive property. Let's say $x_1 = 1$, then $x_1 \sim x_1$ would suggest $1 + 1 = 0$, which obviously raises a contradiction. Therefore, this relation breaks the reflexive property and cannot be an equivalence relation.
+
+	\item
+
+...B can be obtained from A by performing a sequence of row operations.
+
+	\item
+
+$
+\begin{array}{ccc}
+
+\left(\begin{array}{ccc}
+3 & 3 & 3 \\
+0 & 0 & 3 \\
+-2 & -2 & 8
+\end{array}\right)
+
+\left(\begin{array}{ccc}
+3 & 3 & 3 \\
+0 & 0 & 3 \\
+-1 & -1 & 4
+\end{array}\right)
+
+\left(\begin{array}{ccc}
+3 & 3 & 3 \\
+0 & 0 & 3 \\
+-2 & -2 & 5
+\end{array}\right)
+
+\end{array}
+$
+
+	\end{enumerate}
+
+	\item
+
+	\begin{enumerate}[label=(\roman*)]
+
+	\item
+	
+$\begin{array}{cc}
+
+\left(\begin{array}{cc}
+1 & 3 \\
+3 & -1
+\end{array}\right)
+
+\xrightarrow[\text{$\frac{R_2}{10}$}]{\text{$R_2 - 3 R_1$}}
+
+\left(\begin{array}{cc}
+1 & 3 \\
+0 & 1
+\end{array}\right)
+
+\xrightarrow{\text{$R_1 - 3 R_2$}}
+
+\left(\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}\right)
+
+\end{array}$
+
+$\begin{array}{cc}
+
+\left(\begin{array}{cc}
+1 & 2 \\
+4 & 8
+\end{array}\right)
+
+\xrightarrow{\text{$R_2 - 4 R_1$}}
+
+\left(\begin{array}{cc}
+1 & 2 \\
+0 & 0
+\end{array}\right)
+
+\end{array}$
+
+Not row equivalent.
+
+\item
+
+$\begin{array}{cc}
+
+\left(\begin{array}{ccc}
+1 & 1 & 1 \\
+-1 & 2 & 2
+\end{array}\right)
+
+\xrightarrow[\text{$\frac{R_2}{3}$}]{\text{$R_2 + R_1$}}
+
+\left(\begin{array}{ccc}
+1 & 1 & 1 \\
+0 & 1 & 1
+\end{array}\right)
+
+\xrightarrow{\text{$R_1 - R_2$}}
+
+\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 1
+\end{array}\right)
+
+\end{array}$
+
+$\begin{array}{cc}
+
+\left(\begin{array}{ccc}
+0 & 3 & -1 \\
+2 & 2 & 5
+\end{array}\right)
+
+\xrightarrow[\text{$\frac{R_1}{2}$}]{\text{$Swap R_1, R_2$}}
+
+\left(\begin{array}{ccc}
+1 & 1 & $5/2$ \\
+0 & 3 & -1
+\end{array}\right)
+
+\xrightarrow[\text{$R_1 - R_2$}]{\text{$\frac{R_2}{3}$}}
+
+\left(\begin{array}{ccc}
+1 & 0 & $17/6$ \\
+0 & 1 & $-1/3$
+\end{array}\right)
+
+\end{array}$
+
+Not row equivalent.
+
+\item
+
+$\begin{array}{cc}
+
+\left(\begin{array}{ccc}
+1 & 1 & 3 \\
+0 & 0 & 3 \\
+-2 & -2 & 8
+\end{array}\right)
+
+\xrightarrow[\text{$\frac{R_2}{3}$}]{\text{$R_3 + 2 R_1$}}
+
+\left(\begin{array}{ccc}
+1 & 1 & 3 \\
+0 & 0 & 1 \\
+0 & 0 & 14
+\end{array}\right)
+
+\xrightarrow[\text{$R_1 - 3 R_2$}]{\text{$R_3 - 14 R_2$}}
+
+\left(\begin{array}{ccc}
+1 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\end{array}\right)
+
+\end{array}$
+
+$\begin{array}{cc}
+
+\left(\begin{array}{ccc}
+0 & 1 & 2 \\
+1 & 0 & 3 \\
+1 & -1 & 1
+\end{array}\right)
+
+\xrightarrow[\text{$R_3 - R_1$}]{\text{$Swap R_1 and R_2$}}
+
+\left(\begin{array}{ccc}
+1 & 0 & 3 \\
+0 & 1 & 2 \\
+0 & -1 & -2
+\end{array}\right)
+
+\xrightarrow{\text{$R_3 + R_2$}}
+
+\left(\begin{array}{ccc}
+1 & 0 & 3 \\
+0 & 1 & 2 \\
+0 & 0 & 0
+\end{array}\right)
+
+\end{array}$
+
+Not row equivalent.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Proof: Let $R_1, R_2, ..., R_k$ be the row operations such that $R_k, ..., R_2, R_1 A$ is in reuduced row echelon form. Let b' = $\left(\begin{array}{c} 0 \\ 0 \\. \\. \\ 1 \end{array}\right)$ where b' $\in \mathbb{R}^{m}$. Then, $(R_k ... R_1 A | b')$ has no solution because the echelon form of A has a row of zeroes. Denote $b = R_1^{-1} R_2^{-1} ... R_k^{-1} b'$. We claim that $(A | b)$ has no solution. Indeed, apply row operations $R_1 - R_k$ on $(A | b)$ and end up with no solutions.
+
+\item Proof: Let $R_1, R_2, ..., R_k$ be the row operations such that $R_k, ..., R_2, R_1 A$ is in reduced row echelon form. Then, in  $R_k, ..., R_2, R_1 A$, each column corresponds to either a pivot or a free variable. Since we are given there are more rows than columns, there must be a row of all zeros. Thus, using the proof in the previous question, if the echelon form of A has a row of zeros, then there exists a $b \in \mathbb{R}^m$ where $(A|b)$ has no solution.
+
+\item Proof:  Let $R_1, R_2, ..., R_k$ be the row operations such that $R_k, ..., R_2, R_1 A$ is in reduced row echelon form. Then, in  $R_k, ..., R_2, R_1 A$, at least one column contains a free variable. In the case where this echelon matrix doesn't consist of all pivot variables, there will be at least one row of zeros. Thus, using the proof in the first part of this question, if the echelon form of A has a row of zeros, then there exists a $b \in \mathbb{R}^m$ where $(A|b)$ has no solution.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{Proving a $\xrightarrow{}$ b:} Let $R_1, R_2, ..., R_k$ be the row operations such that $R_k, ..., R_2, R_1 A$ is in reduced row echelon form. Then, we claim that $R_k, ..., R_2, R_1 A$ is the matrix $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & 1_{(n,n)} \end{array}\right)$. Indeed, this is true since $(R_k, ..., R_2, R_1 A | 0)$ has exactly one solution (AKA trivial solution) consisting of all zeros. Similarly $(R_k, ..., R_2, R_1 A | R_k, ..., R_2, R_1 b)$ for $b \in \mathbb{R}^n$ always has a solution since every column has a pivot and no lie exists. Apply inverse row operations $R_1^{-1} R_2^{-1} ... R_k^{-1} $ on $(R_k, ..., R_2, R_1 A | R_k, ..., R_2, R_1 b)$ to end up with $(A|b)$. We then claim $(A | b)$ to have a solution for every $b \in \mathbb{R}^n$. Indeed, apply row operations $R_1 - R_k$ on $(A | b)$. \\
+\textbf{Proving a $\xleftarrow{}$ b:} Let $R_1, R_2, ..., R_k$ be the row operations such that $R_k, ..., R_2, R_1 A$ is in reduced row echelon form. Then, we claim that $R_k, ..., R_2, R_1 A$ is the matrix $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & 1_{(n,n)} \end{array}\right)$. Indeed, $(R_k, ..., R_2, R_1 A | b)$ gives a solution for every $b \in \mathbb{R}^n$ since every row contains a pivot and no row has a lie. Then, we also know $(R_k, ..., R_2, R_1 A | 0)$ has exactly one solution because every pivot corresponds to a 0. Apply inverse row operations $R_1^{-1} - R_k^{-1}$ on $(R_k, ..., R_2, R_1 A | 0)$ to arrive at $(A|0)$. We claim that the homogenous system $(A|0)$ has exactly one solution. Indeed, Apply row operations $R_1 - R_k$ on $(A|0)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item 
+
+$
+\begin{array}{cc}
+
+\left(\begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 1 & 0
+\end{array}\right)
+
+\left(\begin{array}{ccc|c}
+1 & 0 & 0 & 1\\
+0 & 1 & 1 & 1
+\end{array}\right)
+
+\end{array}
+$
+Both of these have infinite solutions.
+
+\item
+
+$
+\begin{array}{cc}
+(A|b) =
+\left(\begin{array}{cc|c}
+1 & 1 & 2\\
+1 & 1 & 2
+\end{array}\right)
+(B|b) =
+\left(\begin{array}{cc|c}
+1 & 1 & 2\\
+0 & 0 & 2
+\end{array}\right)
+
+\end{array}
+$
+\\$A \sim B$ but they have differing number of solutions.
+
+\item
+
+$
+\begin{array}{cc}
+(A|b) =
+\left(\begin{array}{ccc}
+1 & 1 & 1\\
+1 & 1 & 1
+\end{array}\right)
+(B|b) =
+\left(\begin{array}{ccc}
+2 & 2 & 2\\
+1 & 1 & 1
+\end{array}\right)
+
+\end{array}
+$
+\\You cannot get from A to B performing column operations.
+
+\item
+
+$
+\begin{array}{cc}
+u,v \in Sol
+\left(\begin{array}{cc|c}
+1 & 0 & 3\\
+0 & 1 & 3
+\end{array}\right)
+u,v=
+\left(\begin{array}{c}
+3 \\ 3 \end{array}\right)
+u+v=
+\left(\begin{array}{c}
+6 \\ 6 \end{array}\right)
+
+\end{array}
+$
+\\
+$u+v$ is not a solution.
+
+\item
+
+$
+\begin{array}{cc}
+u \in Sol
+\left(\begin{array}{cc|c}
+1 & 0 & 3\\
+0 & 1 & 3
+\end{array}\right)
+u =
+\left(\begin{array}{c}
+3 \\ 3 \end{array}\right)
+t = 2 &
+tu=
+\left(\begin{array}{c}
+6 \\ 6 \end{array}\right)
+
+\end{array}
+$
+\\
+$tu$ is not a solution.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
