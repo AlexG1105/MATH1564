@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW7 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item The basis is: $\left(\left(\begin{array}{c} 1 \\ 1 \\ 1 \\ 0 \\ -2 \end{array}\right),\left(\begin{array}{c} 2 \\ -1 \\ 0 \\ 5 \\ 2 \end{array}\right),\left(\begin{array}{c} 1 \\ -1 \\ 3 \\ 5 \\ 1 \end{array}\right)\right)$. To show that something is a basis, we want it to be a spanning set for the given vector space V and linearly independent. To prove the former is true, we want to find the span of our basis which can be denoted as: \\$\left(a \left(\begin{array}{c} 1 \\ 1 \\ 1 \\ 0 \\ -2 \end{array}\right) + b \left(\begin{array}{c} 2 \\ -1 \\ 0 \\ 5 \\ 2 \end{array}\right) + c\left(\begin{array}{c} 1 \\ -1 \\ 3 \\ 5 \\ 1 \end{array}\right) : a,b,c \in \mathbb{R}\right)$. It is immediately apparent that the span of this equals V, since the given vector space V can also be written as $\left(t \left(\begin{array}{c} 1 \\ 1 \\ 1 \\ 0 \\ -2 \end{array}\right) + r \left(\begin{array}{c} 2 \\ -1 \\ 0 \\ 5 \\ 2 \end{array}\right) + s\left(\begin{array}{c} 1 \\ -1 \\ 3 \\ 5 \\ 1 \end{array}\right) : t,r,s \in \mathbb{R}\right)$. Now, to prove if the basis is linearly independent, we take our basis vectors and combine them into a larger augmented homogeneous matrix: $\left(\begin{array}{ccc|c} 1 & 2 & 1 & 0 \\ 1 & -1 & -1 & 0 \\ 1 & 0 & 3 & 0 \\ 0 & 5 & 5 & 0 \\ -2 & 2 & 1 & 0 \end{array}\right)$. We then take RREF which is $\left(\begin{array}{ccc|c} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right)$. Since there are no free variables and the only solution is the trivial solution, this is indeed linearly independent.
+
+\item The basis is (in order): $\left(\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \\ \left(\begin{array}{cccc} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 1 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0\\ 0 & 1 & 0 & 0 \end{array}\right),\\ \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1\\ 0 & 0 & 1 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 1 \end{array}\right)$. To prove this is a basis, let us denote each matrix as $A_n$ where n is its order in the basis set ($1 - 10$). We first want to show it is a spanning set. By definition, the spanning set is given by $c_1 A_1 + c_2 A_2 + ... + c_{10} A_{10}$ where $c_1,...,c_{10} \in \mathbb{R}$. In a single matrix, this is equivalent to $\left(\left(\begin{array}{cccc} c_1 & c_2 & c_3 & c_4 \\ c_2 & c_5 & c_6 & c_7 \\ c_3 & c_6 & c_8 & c_9 \\ c_4 & c_7 & c_9 & c_{10} \end{array}\right): c_1,...,c_{10} \in \mathbb{R} \right)$. It is apparent that the span is equal to the original vector space V because it is, by definition, a collection of all symmetric matrices. Therefore, our base is a spanning set. Next, we want to prove that this is linearly independent. To do this, we want to show that the only solution to this system $a_1 A_1 + a_2 A_2 + ... + a_{10} A_{10} = M_4(0)$ is the trivial solution where $(a_1 - a_{10} = 0)$. To show this, let us attempt to solve the linear system: $\left(\begin{array}{cccc} a_1 & a_2 & a_3 & a_4 \\ a_2 & a_5 & a_6 & a_7 \\ a_3 & a_6 & a_8 & a_9 \\ a_4 & a_7 & a_9 & a_{10} \end{array}\right) = \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right)$. Therefore, it is clear that each entry of the matrix is equal to 0, and there is only one variable in it, which means that all $a_1 - a_{10} = 0$, making the trivial solution the only solution, and thus this basis is linearly independent.
+
+\item The basis is (in order): $\left(\begin{array}{cccc} 0 & 1 & 0 & 0 \\ -1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ -1 & 0 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\\ -1 & 0 & 0 & 0 \end{array}\right), \\ \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0\\ 0 & 0 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0\\ 0 & -1 & 0 & 0 \end{array}\right), \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1\\ 0 & 0 & -1 & 0 \end{array}\right)$. To prove this is a basis, let us denote each matrix as $A_n$ where n is its order in the basis set ($1 - 6$). We first want to show it is a spanning set. By definition, the spanning set is given by $c_1 A_1 + c_2 A_2 + ... + c_6 A_6$ where $c_1,...,c_6 \in \mathbb{R}$. In a single matrix, this is equivalent to $\left(\left(\begin{array}{cccc} 0 & c_1 & c_2 & c_3 \\ -c_2 & 0 & c_4 & c_5 \\ -c_2 & -c_4 & 0 & c_6 \\ -c_3 & -c_5 & -c_6 & 0 \end{array}\right): c_1,...,c_6 \in \mathbb{R} \right)$. It is apparent that the span is equal to the original vector space V because it is, by its definition a collection of all anti-symmetric matrices. Therefore, our base is a spanning set. Next, we want to prove that this is linearly independent. To do this, we want to show that the only solution to this system $a_1 A_1 + a_2 A_2 + ... + a_{6} A_{6} = M_4(0)$ is the trivial solution where $(a_1 - a_6 = 0)$. To show this, let us attempt to solve the linear system: $\left(\begin{array}{cccc} 0 & a_1 & a_2 & a_3 \\ -a_2 & 0 & a_4 & a_5 \\ -a_2 & -a_4 & 0 & a_6 \\ -a_3 & -a_5 & -a_6 & 0 \end{array}\right) = \left(\begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right)$. Therefore, it is clear that each entry of the matrix is equal to 0, and there is only one variable in it, which means that all $a_1 - a_6 = 0$, making the trivial solution the only solution, and thus this basis is linearly independent.
+
+\item The basis is $\left(\begin{array}{c} -1 \\ 2 \\ 1 \end{array}\right)$. We want to show that this spans the solution of the given homogenous equations. First, let us find the solutions, by taking the RREF of the matrix of linear systems given: $\left(\begin{array}{ccc|c} 1 & 1 & -1 & 0 \\ -1 & 2 & -5 & 0 \\ 2 & 5 & -8 & 0 \end{array}\right) \rightarrow \\ \left(\begin{array}{ccc|c} 1 & 1 & -1 & 0 \\ 0 & 1 & -2 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right)$. Since the third column is free, parameterize $z = t$, then $y = 2t$, and $x = -t$. We can then express the solutions as $t \left(\begin{array}{c} -1 \\ 2 \\ 1 \end{array}\right)$ where $t \in \mathbb{R}$. Therefore, the span of our basis is equal to the set of solutions, and it is a spanning set. To show that our basis is linearly independent we want to show that the augmented system only has the trivial solution. $\left(\begin{array}{c|c} -1 & 0 \\ 2 & 0 \\ 1 & 0 \end{array}\right)$. Since there is only one vector, the only way for it to reach zero would be through the trivial solution. Thus, our basis is also linearly independent.
+
+\item The basis is $(-\frac{1}{3} x^2 + x, 1)$. To prove it is a spanning set, let us find some way to parameterize the given vector space. Since $P(1) = P(2)$, we know that for $a,b,c \in \mathbb{R}$, $a(1)^2 + b(1) +c = a(2)^2 + b(2) + c \rightarrow a + b + c = 4a + 2b + c \rightarrow a = -\frac{1}{3}b$. Then, plug this in and we get $P(x) = -\frac{1}{3}bx^2 + bx + c = b(-\frac{1}{3}x^2 + x) + c(1)$. Therefore, the span of the basis equals the vector space, and it is a spanning set. To prove linear independence, we want to show if the linear combination of elements in the basis equals 0. So for some $a_1, a_2 \in \mathbb{R}$, we want to show whether $a_1 (-\frac{1}{3} x^2 + x) + a_2 (1) = 0$ only yields the trivial solution for $a_1, a_2$. To simplify this we use the coefficients for each polynomial to make a linear system:  $-a_1\frac{1}{3}x^2 = 0x^2, a_1 x = 0x, a_2 = 0$. Thus, $a_1, a_2$ are clearly 0, and the system only has a trivial solution, so it is linearly independent.
+
+\item The basis is $(-0.5x^3 + x^2, x, 0.5x^3 + 1)$. Let us find the vector space in terms of parameterizations. For $a,b,c \in \mathbb{R}$, $P(1) = P'(1)$ equivalent to $a + b + c + d = 3a + 2b + c$, which means $a = (-0.5b + 0.5d)$. Then, $P(x) = (-0.5b + 0.5d)x^3 + bx^2 + cx + d = b(-0.5x^3 + x^2) + c(x) + d(0.5x^3 + 1)$. Therefore, the span of the basis is equivalent to this vector space, and it is a spanning set. Then, to prove linear independence for the basis, we want to show that the homogenous linear combination of the basis only has the trivial solution. So, for some $a_1, a_2, a_3 \in \mathbb{R}$, $-0.5a_1x^3 + 0.5a_3x^3 = 0x^3, a_1x^2 = 0x^2, a_2x = 0x, a_3 = 0$. It is immediately apparent in the latter three equations that $a_1,a_2,a_3 = 0$, so indeed only the trivial solution exists and the basis is linearly independent.
+
+\item The basis is $\left(\left(\begin{array}{cc} -2 & 1 \\ 0 & 0 \end{array}\right),\left(\begin{array}{cc} 0 & 0 \\ -2 & 1 \end{array}\right)\right)$. The matrix A that satisfies $A \left(\begin{array}{c} 1 \\ 2 \end{array}\right) = 0$ can be represented as $\left(\begin{array}{cc} -2b & b \\ -2d & d \end{array}\right)$. This is the same as $b \left(\begin{array}{cc} -2 & 1 \\ 0 & 0 \end{array}\right) + d \left(\begin{array}{cc} 0 & 0 \\ -2 & 1 \end{array}\right)$. Evidently, the span of the basis equals this, so the span of the basis is a spanning set. We then want to show that for $a_1 \left(\begin{array}{cc} -2 & 1 \\ 0 & 0 \end{array}\right) + a_2 \left(\begin{array}{cc} 0 & 0 \\ -2 & 1 \end{array}\right) = \left(\begin{array}{cc} 0 & 0 \\ 0 & 0 \end{array}\right)$, the only solution would be $a_1 = a_2 = 0$. So, we set a linear system for each entry of the matrix: $-2a_1 + 0a_2 = 0, a_1 + 0a_2 = 0, 0a_1 -2a_2 = 0, 0a_1 + a_2 = 0$. Evidently, $a_1,a_2 = 0$, so the the homogenous linear combination only has the trivial solution, therefore this basis is linearlry independent.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item We first want to prove that D is a spanning set for $\mathbb{R}_2$. Let $S = (1,x,x^2)$ and let $T = (1, 1+x, (1+x)^2)$. We then want to show that $S \in Span(T)$. \[ 1 = 1(1) + 0(1 + x) + 0(1 + x)^2\] \[x = -1(1) + 1(1+x) + 0(1+x)^2\] \[x^2 = 1(1) -2(1+x) + 1(1+x)^2\] Then, because $(1,x,x^2) \in span(T)$, we can use the theorem $S \subseteq Span(T)$, then $Span(S) \subseteq Span(T)$. So, $Span(1,x,x^2) = \mathbb{R}_2(x) \subseteq Span(T)$. Thus, $Span(1,1+x,(1+x)^2) = \mathbb{R}_2(x)$. Then, we want to prove that D is linearly independent, so if $a_1 (1) + a_2 (1 + x) + a_3 (1 + x)^2 = 0$, only when $a_1,a_2,a_3 = 0$. We simply set up the system of equations: $a_1 + a_2 + a_3 = 0, a_2x + 2a_3x = 0x, a_3x^2 = 0x^2$. It is evident that $a_1,a_2,a_3 = 0$, so the only solution to this system is the trivial one. Therefore, the basis is linearly independent.
+
+\item $[3 - 2x + x^2]_B = \left(\begin{array}{c} 3 \\ -2 \\ 1 \end{array}\right)$ \\
+$[3 - 2x + x^2]_C = \left(\begin{array}{c} -2 \\ 1 \\ 3 \end{array}\right)$ \\
+$[3 - 2x + x^2]_D = \left(\begin{array}{c} 6 \\ -4 \\ 1 \end{array}\right)$
+
+\item $p_1(x) = 1(1) + 3(x) -1(x^2) =1 + 3x - x^2$ \\ $p_2(x) = 1(x) + 3(x^2) - (1) = x + 3x^2 - 1$ \\
+$p_3(x) = 1(1) + 3(1 + x) - (1 + 2x + x^2) = 3 + x - x^2$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item When we employ the algorithm for determining the basis, we form the combined matrix and take the echelon form which is $\left(\begin{array}{ccc} 1 & 2 & k \\ 0 & -5 & -3k + 7 \\ 0 & 0 & -2k + 8 \end{array}\right)$. We know that in order for all vectors in B to be part of the basis, there cannot be any rows of 0 in the resulting matrix. Therefore, when $k = 4$, we end up with a row of zero, so when $k \neq 4$, B is a basis.
+
+\item When k = 2, we can set up an augmented matrix $\left(\begin{array}{ccc|c} 1 & 2 & 2 & 1 \\ 3 & 1 & 7 & 14 \\ -1 & 3 & 1 & -8 \end{array}\right)$. The solution to this which is also $[\left(\begin{array}{c} 1 \\ 14 \\ -8 \end{array}\right)]_B$ is $\left(\begin{array}{c} 3 \\ -2 \\ 1 \end{array}\right)$
+
+\item $ \left(\begin{array}{c} 1 \\ 3 \\ -1 \end{array}\right) + \left(\begin{array}{c} 2 \\ 1 \\ 3 \end{array}\right) - 2 \left(\begin{array}{c} 2 \\ 7 \\ 1 \end{array}\right) = \left(\begin{array}{c} -1 \\ -10 \\ 0 \end{array}\right)$
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item $\left[ \left(\begin{array}{cc} 6 & -3 \\ -4 & 2 \end{array}\right) \right]_B = \left(\begin{array}{c} -3 \\ 2 \end{array}\right)$
+
+\item $\left[ \left(\begin{array}{cc} 0 & 0 \\ 2 & -1 \end{array}\right) \right]_B = \left(\begin{array}{c} 0 \\ -1 \end{array}\right)$
+
+\end{enumerate}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item If $v_1,...,v_n$ is a basis, then they are respectively linearly independent. To prove it is the maximal linearly independent set, we want to show that adding any v results in a linearly dependent set. So, suppose another $u \in V$. However, we know that the basis spans all of V, so the new element u can be written as a linear combination of $v_1,...,v_n$. Therefore, adding it to the basis would make it linearly dependent. So, the basis is the maximum linearly independent set.
+
+\item If $v_1,...,v_n$ is the maximal linearly independent set in V, then adding another component makes it linearly dependent. In other words, this means that every element in V can be expressed as a linear combination of the basis, so when you add that element of V, the basis becomes liniearly dependent. We can then make the conjecture that the basis is indeed a spanning set. We are also given that it is independent, so therefore it is a basis.
+
+\item Let us fist show that the basis is a spanning set. The basis is $v_1,...,v_n$, and its span is equal to $Span(v_1,...,v_n)$ which is exactly equal to the $Span(v_1,...,v_n)$, so $v_1,...,v_n$ is a spanning set for $Span(v_1,...,v_n)$. We are also given that $v_1,...,v_n$ is linearly independent, so it is a basis.
+
+\item If $v_1,...,v_n$ is a basis for V, then that means $Span(v_1,...,v_n) = V$. Since this is true, the only way for $Span(v_1,...,v_n,w) = V$ is if $w \in V$. If $w \in V$, it is also true if and only if $w \in Span(v_1,...,v_n)$, then if and only if w is a linear combination of $v_1,...,v_n$, which means $v_1,...,v_n,w$ is linearly dependent. Therefore, $span(v_1,...,v_n,w) = V$ if and only if $(v_1,...,v_n,w)$ is linearly dependent.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Proving 1 $\rightarrow$ 2: If A is invertible, then its equivalent RREF form is the identity matrix $I_n$ as proved in previous lessons. Since the identity matrix has a pivot in every row and column, it thus spans all of $\mathbb{R}^n$. Additionally, since we know that A and $I_n$ are row equivalent, the spans of their columns should be equal. So, $Span(A) = Span(I_n) = \mathbb{R}^n$. Therefore, we proved that the columns of A span $\mathbb{R}^n$. Similarly, we want to prove that A is linearly independent. Again we find its RREF to be $I_n$ and want to show that \\ $a_1 \left(\begin{array}{c} 1 \\ 0 \\ ... \\ 0 \end{array}\right) + a_2 \left(\begin{array}{c} 0 \\ 1 \\ ... \\ 0 \end{array}\right) + ... + a_n \left(\begin{array}{c} 0 \\ 0 \\ ... \\ 1 \end{array}\right) =\left(\begin{array}{c} 0 \\ 0 \\ ... \\ 0 \end{array}\right) $ only has the trivial solution. When we simplify this equation, we get that $a_1,...,a_n = 0$, which means that the columns in A are also linearly independent. Therefore it is a basis.
+
+\item Proving 2 $\rightarrow$ 3: Since the columns of A form a basis for $\mathbb{R}^n$, there exists a row equivalent matrix denoted as $A'$ which has at least a pivot in each column, and also spans all of  $\mathbb{R}^n$ while being linearly independent. Since A is a square matrix of n dimensions, however, it means that each column must have a pivot. If there is a pivot in each column of a square matrix, its row equivalent RREF form is the identity matrix $I_n$. Since $I_n$ is row equivalent to A, its columns are also a basis. Furthermore, in an identity matrix, each respective row is the same as each respective column. Therefore, the rows in the Identity matrix are also a basis for $\mathbb{R}^n$ because it is the same as the columns and we are given that the columns are already a basis. Then, since $I_n$ and $A$ are row equivalent, we can reason that the rows in $A$ will also be a basis.
+
+\item Proving 3 $\rightarrow$ 1: If the rows of A form basis for $\mathbb{R}^n$ , this implies that A is row equivalent to the identity matrix. One of the definitions for invertibility is if its RREF is the identity matrix. Therefore, A is invertible.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

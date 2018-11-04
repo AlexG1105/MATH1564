@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW8 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+
+\begin{enumerate}
+
+\item 1a: 3; 1b: 10, 1c: 6, 1d: 1, 1e: 2, 1f: 3, 1g: 2
+
+\item
+
+\begin{enumerate}
+
+\item Place each vectors in rows to form a matrix, then take the RREF: $\left(\begin{array}{ccc} 1 & 0 & 3.5 \\ 0 & 1 & -1.5 \\ 0 & 0 & 0 \end{array}\right)$. The non zero-rows are the basis, which are $\left(\left(\begin{array}{c} 1 \\ 0 \\ 3.5 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ -1.5 \end{array}\right)\right)$, and its dimension is 2.
+
+\item Place each vectors in rows to form matrix, then take the RREF:  $\left(\begin{array}{cccc} 1 & 0 & 0.5 & 1.5 \\ 0 & 1 & -0.5 & 0.5 \\ 0 & 0 & 0 & 0 \end{array}\right)$. Basis is thus $\left(\left(\begin{array}{c} 1 \\ 0 \\ 0.5 \\ 1.5 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ -0.5 \\ 0.5 \end{array}\right)\right)$, and its dimension is 2.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Since all items $l \in L(A)$ have a solution to $(A|l)$, it means that l is a linear combination of the columns in A, which are denoted as $v_1,...,v_n$. Therefore, for some $c_1,...,c_n \in \mathbb{R}$, we can get $l = c_1 v_1 + ... + c_n v_n$. If we were to represent the linear combinations of all $c_1 v_1  + ... + c_n v_n$, it would be equivalent to $span\{v_1,...,v_n\} = L(A)$.
+
+\item $L(A) = span \left( \left(\begin{array}{c} 1 \\ 3 \\ 1 \\ 2 \end{array}\right), \left( \begin{array}{c} 2 \\ -1 \\ 4 \\ 2 \end{array}\right), \left( \begin{array}{c} 1 \\ 10 \\ -1 \\ 4 \end{array}
+\right)\right)$. To find the basis, we take the RREF of its respective matrix: $\left(\begin{array}{cccc} 1 & 0 & \frac{13}{7} & \frac{8}{7} \\ 0 & 1 & -\frac{2}{7} & \frac{2}{7} \\ 0 & 0 & 0 & 0 \end{array}\right)$. The basis is thus: $\left(\left(\begin{array}{c} 1 \\ 0 \\ \frac{13}{7} \\ \frac{8}{7} \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ -\frac{2}{7} \\ \frac{2}{7} \end{array}\right) \right)$, and its dimension is 2.
+
+\end{enumerate}
+
+\item Let $v_1,...,v_m \in \mathbb{R}^n$
+
+
+\begin{enumerate}
+
+\item \textbf{No.} To save time without using dimensions, all the matrices are equal, which means that they are not linear independent because they can be a linear combination of each other. Therefore they are not a basis.
+
+\item \textbf{Yes.} First of all, it is clear that $m < n$, so it is not a spanning set. When we take the coordinates in respect to a simple base and put them in a matrix and find the RREF, we get $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{array}\right)$. Therefore it is linearly independent.
+
+\item \textbf{No.} In coordinate form, $m < n$, so it is not a spanning set for $\mathbb{R}^n$, which is $\mathbb{R}^4$ in this case. Therefore the matrix is not a part of the span.
+
+\item \textbf{Yes.} For this in coordinates, $m = n$. The RREF of the  matrix where we put the coordinates in the columns is the identity matrix, which is spanning and is linearly independent. Therefore it is a basis.
+
+\item \textbf{No.} In coordinate form, $m < n$, so it is not a spanning set for the set of all 3rd degree polynomials. Therefore, the given polynomial is not a part of the span.
+
+\item \textbf{Yes.} For this in coordinates, $m = n$. The RREF of the matrix where we put the coordinates in the columns is: $\left(\begin{array}{cccc} 1 & 0 & 0.5 & -1 \\ 0 & 1 & -0.25 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{array}\right)$. However, there are zero rows, meaning that this is not a spanning set.
+
+\item \textbf{2}
+
+\item \textbf{Yes.} If we take the coordinate of each element and put it into a matrix in RREF form, we can simplify the elements in each matrix to 2 items which are ($1 + 0.5x^2 - x^3, x - 0.25x^2$).
+
+\item $\left( \left(\begin{array}{cc} 1 & 1 \\ -1 & -1 \end{array}\right), \left(\begin{array}{cc} -1 & 1 \\ 2 & 1 \end{array}\right), \left(\begin{array}{cc} 1 & 4 \\ -1 & 1 \end{array}\right), \left(\begin{array}{cc} 0 & -1 \\ -2 & 2 \end{array}\right)\right)$.
+
+\end{enumerate}
+
+\item Denote $[v]_B = \left(\begin{array}{c} c_1 \\ ... \\ c_n \end{array}\right)$, then by definition, $v = c_1 b_1 + ... + c_n b_n$. Similarly, $\alpha v = \alpha (c_1 b_1 + ... + c_n b_n)$, and this is equivalent to $\alpha [v]_b$. We can take the same equation, and say that $\alpha (c_1 b_1 + ... + c_n b_n) = \alpha c_1 b_1 + ... + \alpha c_n b_n$. This same equation is equivalent to $[\alpha v]_b$. Therefore, $\alpha [v]_b = [\alpha v]_b$.
+
+\item Forward proof: \\ \textbf{Property 1:} Since W is already a subspace of V, by definition it should have at least 1 element in it. We then know that if we take the coordinate of anything that is nonempty, it should yield some real number. Therefore, the coordinate set cannot be empty \\ \textbf{Property 2:} Because $v,w \in W$, we also know that $[v]_b, [w]_b \in [W]_b$. Also, we are given the property that $[v]_b + [w]_b = [v + w]_b$. We also know that the coordinate in respect to the basis yields us a vector of real numbers, which is contained within the superset $\mathbb{R}^m$. \\ \textbf{Property 3:} Because for some $a \in \mathbb{R}$, $av \in W$, we know that $[av]_b \in [W]_b$. The coordinate in respect to the basis yields us a vector of real numbers, which is contained within the superset $\mathbb{R}^m$. \\
+Backwards proof: \\ \textbf{Property 1:} Since $[w]_b$ is a subspace of $\mathbb{R}^m$, there exists a $w \in W$ so that $[w]_b \in [W]_b$. Therefore, w is not empty. \\ \textbf{Property 2:} Since $[W]_b$ is a subspace of $\mathbb{R}^m$, if we use the proposition in class, $[w_1]_b + [w_2]_b = [w_1 + w_2]_b$, we can reason that $[w_1 + w_2]_b \in [W]_b$. Similarly, $w_1 + w_2 \in W$, and therefore it is closed to addition. \\ \textbf{Property 3:} $[W]_b$ is closed to scalar, so for some $\alpha \in \mathbb{R}$, $\alpha[w]_b = [\alpha w]_b \in [W]_b$. Then, $\alpha w \in W$, so it is thus closed to multiiplication.
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{True.} Let V have a basis $(v_1,v_2,v_3)$, so it has dimension 3 by definition. Let W have a basis $(v_2, v_3)$, and let U have a basis $(v_3)$, so their dimensions are 2 and 1 respectively. U and W are both subspaces of V since the span of a subset of another set is a subspace. Therefore, there exists a subspace U and W whose dimensions are 1 and 2.
+
+\item \textbf{True.} In class we proved if W was a subspace of V, then the $dim(W) \leq dim(V)$, and therefore $dim(W) \leq 3$. Since W is a non-trivial subspace of V, $W \neq V$. By another proposition in class, that means $dim(V) \neq dim(W)$. Then, $dim(W) < 3$. With the same reasoning, we say that $dim(U) < dim(W)$, since U is a nontrivial subspace of W. We are then lef with $dim(W) = 2$ and $dim(U) = 1$.
+
+\item \textbf{False.} Counterexample: $v_1 = \left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right), v_2 = \left(\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right), v_3 = \left(\begin{array}{c} 1 \\ 1 \\ 0 \end{array}\right)$. Then, \\ $(v_1,v_2), (v_2, v_3), (v_3, v_1)$ are linearly independent because their respective matrices in RREF are $ \left(\begin{array}{cc} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc} 1 & 1 \\ 0 & 1 \\ 0 & 0 \end{array}\right)$. However, $(v_1,v_2,v_3)$ is not linearly independent because there are infinite solutions to get 0.
+
+\item \textbf{True.} Let us put the vectors $v_1,...,v_n$ into a matrix and find the RREF, and we denote the new rows as $w_1,...,w_m$. By this algorithm, we know our new set of vectors are a basis for $span(v_1,..,v_n)$. Then, by definition, the dimensioins of $span(v_1,...,v_n) = m$. If $(v_1,...,v_2)$ is linearly independent then in echelon form the matrix has no zero rows and $m = n$. In the reverse direction, if the dimensions of $span(v_1,...,v_n) = m = n$, that means there are no zero rows, and therefore using the same matrix algorithm, we know that they are linearly independent. We conclude the if and only if relationship is true.
+
+\item \textbf{False.}  Let $v_1 = ( a \left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right) + b \left(\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right) : a,b \in \mathbb{R} ), v_2 = ( c \left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right) : c \in \mathbb{R} ), v_3 = ( d \left(\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right) : d \in \mathbb{R} )$. So, if we simplify everything, \\ $(v_1 + v_2) =  (a \left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right) + b \left(\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right) : a,b \in \mathbb{R})$, \\ $(v_1 + v_3) = (a \left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right) + b \left(\begin{array}{c} 0 \\ 1 \\ 0 \end{array}\right) : a,b \in \mathbb{R})$. Clearly, these two are equal. It is also evident that the dimension of $v_2$ and $v_3$ are both equal to 1, but $v_2 \neq v_3$, so the statement is false.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

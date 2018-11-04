@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW5 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item
+ Consider $v,w \in P_2(\mathbb{R})$ and $a_0,a_1,a_2,b_0,b_1,b_2 \in \mathbb{R}$. \\
+\textbf{Property 1:}\\ $v + w = (a_0 + a_1x + a_2x^2) + (b_0 + b_1x + b_2x^2)
+\\= (a_0 + b_0) + (a_1 + b_1)x + (a_2 + b_2)x^2$. \\Thus, $v+w$ is also contained in $P_2$. \\
+\textbf{Property 2:} \\$v + w = (a_0 + b_0) + (a_1 + b_1)x + (a_2 + b_2)x^2$ \\Similarly,\\ $w + v = (b_0 + a_0) + (b_1 + a_1)x + (b_2 + a_2)x^2\\=(a_0 + b_0) + (a_1 + b_1)x + (a_2 + b_2)x^2$ \\
+$= v + w$. \\Thus satisfying $v + w = w + v$.\\
+\textbf{Property 3:}\\Also consider $u \in P_2(\mathbb{R})$ and $c_0,c_1,c_2 \in \mathbb{R}$. \\ $(v + w) + u
+= ((a_0 + b_0) + c_0) + ((a_1 + b_1) + c_1)x + ((a_2 + b_2) + c_2)x^2$\\Similarly,\\$v + (w + u) = (a_0 + (b_0 + c_0)) + (a_1 + (b_1 + c_1))x + (a_2 + (b_2 + c_2))x^2\\
+=((a_0 + b_0) + c_0) + ((a_1 + b_1) + c_1)x + ((a_2 + b_2) + c_2)x^2$\\ $= (v + w) + u$ \\
+Thus satisfying $(v + w) + u = v + (w + u)$.\\
+\textbf{Property 4:}\\Observe the zero polynomial $0 + 0x + 0x^2$ in $P_2$. Let us denote this zero polynomial as $0_p$. Then, we want to show that for all $v \in P_2$, $0_p + v = v$.\\
+$0_p + v = (0 + a_0) + (0 + a_1)x + (0 + a_2)x^2$ \\ $= a_0 + a_1x + a_2x^2$ \\ $= v$ \\ Thus satisfying $0_p + v = v$. \\
+\textbf{Property 5:} \\For the given polynomial $w$, we can see that $-w$, which is $(-b_0) + (-b_1)x + (-b_2)x^2$ is also in $P_2$. So, \\ $w + (-w) = 
+(b_0 - b_0) + (b_1 - b_1)x + (b_2 - b_2)x^2 \\ = 0 + 0x + 0x^2 \\ = 0_p$\\ Thus satisfying the fact that $w + (-w) = 0_p$. \\
+\textbf{Property 6:} \\For $\alpha \in \mathbb{R}$, \\ $\alpha v = \alpha (a_0 + a_1x + a_2x^2) = (\alpha a_0) + (\alpha a_1)x + (\alpha a_2)x^2$ \\Thus, $\alpha v$ is also contained in $P_2$.\\
+\textbf{Property 7:} \\For $\alpha, \beta \in \mathbb{R}$, \\ $\alpha (\beta v) = \alpha ((\beta a_0) + (\beta a_1) x + (\beta a_2) x^2)\\ = (\alpha (\beta a_0)) + (\alpha (\beta a_1))x + 
+(\alpha (\beta a_2)) x^2 \\ = ((\alpha \beta) a_0) + ((\alpha \beta) a_1) x + ((\alpha \beta)a_2) x^2 \\ = (\alpha \beta) v$ \\ Thus satisfying $\alpha (\beta v) = (\alpha \beta) v$. \\
+\textbf{Property 8:} \\$1_{\mathbb{R}} v = 1(a_0 + a_1x + a_2x^2) \\ = a_0 + a_1x + a_2x^2 = v$ \\Thus satisfying $1_{\mathbb{R}}v = v$. \\
+\textbf{Property 9:} \\For $\alpha, \beta \in \mathbb{R}$, \\ $(\alpha + \beta) v = ((\alpha + \beta)a_0) + ((\alpha + \beta)a_1)x + ((\alpha + \beta)a_2)x^2 \\ 
+= ((\alpha a_0) + (\beta a_0)) + ((\alpha a_1) + (\beta a_1))x + ((\alpha a_2) + (\beta a_2))x^2 \\
+= ((\alpha a_0) + (\alpha a_1)x + (\alpha a_2)x^2) + ((\beta a_0) + (\beta a_1)x + (\beta a_2)x^2) \\
+= (\alpha v) + (\beta v) $ \\ Thus satisfying $(\alpha + \beta) v = (\alpha v) + (\beta v)$. \\
+\textbf{Property 10:} \\For $\alpha, \beta \in \mathbb{R}$, \\ $\alpha (v+w) = \alpha ((a_0 + b_0) + (a_1 + b_1)x + (a_2 + b_2)x^2) \\ 
+= ((\alpha a_0) + (\alpha b_0)) + ((\alpha a_1) + (\alpha b_1))x + ((\alpha a_2) + (\alpha b_2))x^2 \\
+= ((\alpha a_0) + (\alpha a_1)x + (\alpha a_2)x^2) + ((\alpha b_0) + (\alpha b_1)x + (\alpha b_2)x^2) \\ 
+= (\alpha v) + (\alpha w) $\\ Thus satisfying $\alpha (v + w) = (\alpha v) + (\alpha w)$. \\ \textbf{Since all 10 properties are satisfied, $P_2$ is a vector space over the real numbers.}
+
+\item Consider $v,w, u \in V$ where V is the given set, and $ v = (x_1,y_1,z_1,w_1), w = (x_2,y_2,z_2,w_2), u = (x_3,y_3,z_3,w_3)$ over the real numbers. \\
+\textbf{Property 1:} \\ $v + w = (x_1 + x_2, y_1 + y_2, z_1 + z_2, w_1 + w_2) \\ = (x_1 + x_2) - (y_1 + y_2) + 2(z_1 + z_2) \\ = (x_1 - y_1 + 2z_1) + (x_2 - y_2 + 2z_2) \\ = 0 + 0 = 0$ \\ Thus, $v+w$ is also contained in set V. \\
+\textbf{Property 2:} \\ $v + w = (x_1 + x_2, y_1 + y_2, z_1 + z_2, w_1 + w_2) \\ = (x_2 + x_1, y_2 + y_1, z_2 + z_1, w_2 + w_1) \\ = w + v$ \\ Thus satisfying $v + w = w + v$. \\
+\textbf{Property 3:} \\ $v + (w + u) = (x_1 + (x_2 + x_3), y_1 + (y_2 + y_3), z_1 + (z_2 + z_3), w_1 + (w_2 + w_3))$ \\ Similarly, \\ $(v + w) + u = ((x_1 + x_2) + x_3, (y_1 + y_2) + y_3, (z_1 + z_2) + z_3, (w_1 + w_2) + w_3)\\ = (x_1 + (x_2 + x_3), y_1 + (y_2 + y_3), z_1 + (z_2 + z_3), w_1 + (w_2 + w_3)) \\ = v + (w + u)$ \\ Thus satisfying $v + (w + u) = (v + w) + u$. \\
+\textbf{Property 4:} \\ Observe the zero component $(0,0,0,0)$ which is in the set because $0 - 0 + 2(0) = 0$. Denote this is as $0_V$. \\ $0_v + v = (0 + x_1, 0 + y_1, 0 + z_1, 0 + w_1) \\
+= (x_1, y_1, z_1, w_1) = v$ \\ Thus satisfying the fact that there exists a $0_V$ so that $0_V + v = v$. \\ 
+\textbf{Property 5:} \\ For an arbitrary $v \in V$, we can see that $-v$, which is $(-x_1, -y_1, -z_1, -w_1)$, is in the set V since $(-x_1) - (-y_1) + 2(z_1) = -(x_1 - y_1 + 2z_1) = -0 = 0. \\ v + (-v) = (x_1 - x_1, y_1 - y_1, z_1 - z_1, w_1 - w_1) \\ = (0,0,0,0) = 0_V$ \\ Thus satisfying the fact there exists a $-v$ so that $v + (-v) = 0$. \\
+\textbf{Property 6:} \\ For $a \in \mathbb{R}$, \\ $a v = (a x_1, a y_1, a z_1, a w_1) \\ = (a x_1) - (a y_1) + 2(a z_1) = a (x_1 - y_1 + 2z_1) = a (0) = 0$ \\
+Thus satisfying $a v \in V$. \\
+\textbf{Property 7:} \\ For $a,b \in \mathbb{R}$, \\ $a(bv) = (a(bx_1), a(by_1), a(bz_1), a(bw_1)) \\ = ((ab)x_1, (ab)y_1, (ab)z_1, (ab)w_1) = (ab)v$ \\ Thus satisfying $a(bv) = (ab)v$. \\
+\textbf{Property 8:} \\ $1_{\mathbb{R}} v = (1x_1, 1y_1,1z_1,1w_1) = (x_1,y_1,z_1,w_1) = v$ \\Thus satisfying $1_{\mathbb{R}} v = v$. \\
+\textbf{Property 9:} \\ For $a,b \in \mathbb{R}$, \\ $(a + b) v = ((a + b) x_1, (a + b) y_1, (a + b) z_1, (a + b) w_1) \\
+= (ax_1 + bx_1, ay_1 + by_1, az_1 + bz_1, aw_1 + bw_1) = (av) + (bv)$ \\ Thus satisfying $(a + b)v = (av) + (bv)$ \\
+\textbf{Property 10:} \\ For $a \in \mathbb{R}$, \\ $a(v + w) = (a(x_1 + x_2), a(y_1 + y_2), a(z_1 + z_2), a(w_1 + w_2)) \\
+=(ax_1 + ax_2, ay_1 + ay_2, az_1 + az_2, aw_1 + aw_2) = (av) + (aw)$ \\ Thus satisfying $a(v + w) = (av) + (aw)$.\\
+\textbf{Since all 10 properties are satisfied, V is a vector spasce over the real numbers.}
+
+\item \textbf{Property 8:} \\ According to the set, it has the operations $\alpha \odot \left(\begin{array}{c} x_1 \\ x_2 \end{array} \right) =  \left(\begin{array}{c} \alpha x_1 \\ 0 \end{array} \right)$. However, property 8 states that $1_{\mathbb{R}} v = v$ for $v \in V$. So, for this set, we would get $1 \odot \left(\begin{array}{c} x_1 \\ x_2 \end{array} \right) =  \left(\begin{array}{c} 1x_1 \\ 0 \end{array} \right)$. Clearly, $\left(\begin{array}{c} x_1 \\ x_2 \end{array} \right) \neq \left(\begin{array}{c} x_1 \\ 0 \end{array} \right) $, so \textbf{this set is not a vector space, as it violates the 8th property.}
+
+\item \textbf{Property 9:} \\ For $a,b \in \mathbb{R}$, according to the operations in the set, $(a + b) v = 
+\left(\begin{array}{c} (a + b) x_1 \\ (a + b) x_2 \end{array} \right) \\ = \left(\begin{array}{c} a x_1 + b x_1 \\ a x_2 + b x_2 \end{array} \right)$. By the 9th condition, this should be equivalent to $(av) + (bv)$. According to the operations in the set, $(av) + (bv) = \left(\begin{array}{c} a x_1 \\ a x_2 \end{array} \right) \oplus \left(\begin{array}{c} b x_1 \\ b x_2 \end{array} \right) = \left(\begin{array}{c} a x_1 + b x_2 \\ a x_2 + b x_2 \end{array} \right)$. Clearly, then, these two are not equal, and \textbf{this set is not a vector space, as it violates the 9th property.}
+
+\item \textbf{Property 4:} \\ Assume that such $0_v$ existed for this set. Let us say $w = \left(\begin{array}{c} 1 \\ 1 \end{array} \right)$. So $w + 0_v = 
+\left(\begin{array}{c} 1 \\ 1 \end{array} \right) + \left(\begin{array}{c} 0 \\ 0 \end{array} \right)
+= \left(\begin{array}{c} 1 + 0 - 3 \\ 1 + 0 - 2 \end{array} \right) = \left(\begin{array}{c} -2 \\ -1 \end{array} \right).$ Clearly, $w + 0_v \neq w$, so \textbf{this set is not a vector space, as it violates the 4th property.}
+
+\item \textbf{Property 8:} \\ $1_\mathbb{R} v = 1_\mathbb{R} \left(\begin{array}{c} x_1 \\ x_2 \end{array} \right)$. Given the set operations, this is equal to $\left(\begin{array}{c} 2x_1 \\ 2x_2 \end{array} \right)$. Therefore, $1_{\mathbb{R}} v \neq v$, and \textbf{this set is not a vector space, as it violates the 8th property.}
+
+\item \textbf{Property 5:} \\ Let us say that $w$ is in this set, and it equals $\left(\begin{array}{c} 1 \\ 1 \end{array} \right)$. Condition 5 states that there exists an element denoted as $-w$ that is also in the set, which is equivalent to $\left(\begin{array}{c} -1 \\ -1 \end{array} \right)$. However, in order for this to be in the set, $x_1, x_2 > 0$, which makes this false. Therefore, for this chosen $w$, its counterpart $-w$ does not exist in the set, and so \textbf{this set is not a vector space as it violates the 5th property.}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Let $a = 2, b = 1$. According to property 9 of a vector space, $(a + b)v = av + bv$. We are given the fact that for every $v \in V$ we have $2v + v = 3v$. Clearly, this follows the property since $2v + v = (2 + 1) v = 3v$.
+
+\item Using property 6 of vector spaces, we know that for any $a \in \mathbb{R}, v \in V$, $a v \in V$. In this scenario, we know that our v is represented by $0_V$. Then, we know as a general rule that for any scalar, $a 0_V$ will also equal zero. We are guaranteed this because property 6 states that this value will still be contained in V. Since each vector space contains the zero (trivial) vector space, there exists only one $0_V$, meaning that any scalar multiplying $0_V$ will yield itself and not any other form of zero.
+
+\item Using property 5 of vector spaces, we are given that for all $v \in V$, there exists a $-v$ so that $v + (-v) = 0$. In this scenario, let us denote $v$ as $-v$, so that would mean $-v + (-(-v)) = 0$. This simplifies to $-v -(-v) = 0$ which is also $-(-v) = v$.
+
+\item Using property 3 of vector spaces, we are given that $(u + v) + w = u + (v + w)$. The question states $(u + w) + (v + z ) = w + (u + (v + z))$. For simplicity, we denote $(v + z)$ as $Y$. Then, we have $(u + w) + Y = w + (u + Y)$. It becomes immediately apparent that these two expressions are equal through property 3. Therefore, the expression is valid.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{Property 3:} For $a \in \mathbb{R}$, property 3 of a subspace guarantees  $aW \in W$. In this scenario, if we choose $a = -1$, and we apply $aW = -1W = 
+\left(\begin{array}{c} -x_1\\-x_2\\-x_3\\-x_4 \end{array} \right)$, it is evident that this is no longer in the set $W$, since all of its components are negative. Thus, \textbf{this set is not a subsapce, as it violates the 3rd property.}
+
+\item 
+\textbf{Property 1:} If $x,y = 0$, the resulting matrix in $W$ is $\left(\begin{array}{cc} 0 & 0 \\ 0 & 0 \end{array} \right)$. Therefore, the zero space exists and the set is not empty. \\
+\textbf{Property 2:} Let $u,v \in W$, then $u + v \\ = \left(\begin{array}{cc} (x_1 + x_2) & (2x_1 + 3y_1) + (2x_2 + 3y_2) \\ (y_1 + y_2) & (x_1 - y_1) + (x_2 - y_2) \end{array} \right) \\
+= \left(\begin{array}{cc} (x_1 + x_2) & 2(x_1 + x_2) + 3(y_1 + y_2) \\ (y_1 + y_2) & (x_1 + x_2) - (y_1 + y_2) \end{array} \right)$ \\ Here, we know that $x_1 + x_2 \in \mathbb{R}$ and $y_1 + y_2 \in \mathbb{R}$. Therefore, $u + v \in W$. \\
+\textbf{Property 3:} For all $a \in \mathbb{R}$, $a W \\ =  \left(\begin{array}{cc} a x & a (2x + 3y) \\ a y & a (x - y)\end{array} \right) 
+= \left(\begin{array}{cc} a x & 2 a x + 3 a y \\ a y & a x - a y\end{array} \right)$. \\ Here, we know that $a x, a y \in \mathbb{R}$. Therefore, $aw \in W$. \\
+\textbf{Since all 3 properties are satisfied, W is a subspace.}
+
+\item \textbf{Property 2:} Let $u,v \in W$, since all individual polynomials in each element add up to $1$ (given by $p(1) = 1$), $u + v = 2$. Clearly, $u + v$ is not in W since its individual polynomials add up to 2. Therefore, \textbf{this set is not a subspace, as it violates the 2nd property.}
+
+\item Take an arbitrary element $v \in W$ and say $v = a + b(1) + c(1)^2 + d(1)^3 = 0$
+\textbf{Property 1:} If we set $a,b,c,d = 0$, $v = (0) + (0)(1) + (0)(1)^2 + (0)(1)^3 = 0$, therefore it is an element to the set W, and we have proved that it isn't empty. \\
+\textbf{Property 2:} If we take another element $w \in W$, we know that $v,w$ are polynomials which add up to 0. Therefore, $v + w = 0 + 0 = 0$, and we can conclude that $v + w \in W$. \\
+\textbf{Property 3:} If we take some $a \in \mathbb{R}$, $a v = a 0 = 0$ since v's polynomials add up to 0. Therefore, we can conclude $a v \in W$. \\ 
+\textbf{Since all 3 properties are satisfied, W is a subspace.}
+
+\item \textbf{Property 3:} For $a \in \mathbb{R}$ and all $w \in W$, let us say $a = \pi$. Then, $a w = \left(\begin{array}{c} ax_1\\ax_2\\ax_3 \end{array} \right)$. However, a rational number multiplied by an irrational number is irrational, which means that $ax_1, ax_2, ax_3 \notin \mathbb{Q}$, which means that $a w \notin W$. Therefore, \textbf{this set is not a subsapce, as it violates the 3rd property.}
+
+\item For all $V,X \in W$:\\
+\textbf{Property 1:} Let us denote the zero matrix as $U$, then we know it is a part of the set if $A U = 0$. For the ij entry of $AU$, $AU_{ij} = \sum\limits_{k = 1}^n a_{ik}u_{kj}$. Because, every element of u is 0, it follows that each ij entry of $AU = 0$, so therefore we can be certain that the zero matrix is in the set W, and that it is not empty. \\ 
+\textbf{Property 2:} If $V+X \in W$, then $A(V + X) = 0$. As we already proved the matrix distributive property, we can simplify this expression to $AV + AX$. Since we know already that $V,X \in W$, $AV, AX = 0$. So, $AV + AX = 0 + 0 = 0$, and therefore $V+X \in W$. \\
+\textbf{Property 3:} For some $b \in \mathbb{R}$, we want to show that $b V \in W$ and subsequently $A(bV) = 0$. For the ij entry of $A(bV)$,  $A(bV)_{ij} = \sum\limits_{k = 1}^n a_{ik}(bv_{kj})$, and since real numbers are multiplicatively communative, this is equivalent to  $\sum\limits_{k = 1}^n b(a_{ik}v_{kj})$. Also, since $V \in W$, it means that $AV = 0$, and each ij element of $AV = 0$, so essentially this evaluates to $\sum\limits_{k = 1}^n b(0) = 0$. Therefore, we have proved that $b V \in W$ by showing that $A (b V) = 0$. \\ \textbf{Since all 3 properties are satisfied, W is a subspace.}
+
+
+\item Say that $v,w \in W$.\\
+\textbf{Property 1:} Let us choose an arbitrary value for f given as $f(x) = 0$. $f(x)$ is twice differentiable, and $f''(x) + 3f'(x) - f(x) = 0$ for all $x \in \mathbb{R}$. Therefore, the set W is not empty, as $f(x) = 0$ is a part of it. \\
+\textbf{Property 2:} For $x_1, x_2 \in \mathbb{R}$, $v + w \\= [f''(x_1) + 3f'(x_1) - f(x_1)] + [f''(x_2) + 3f'(x_2) - f(x_2)] \\= (f''(x_1) + f''(x_2)) + 3(f'(x_1) + f'(x_2)) - (f(x_1) + f(x_2)) = 0  + 0 = 0$. Therefore, $v + w$ belongs to the set.\\
+\textbf{Property 3:} For some $a \in \mathbb{R}$, $a v \\ = a ( f''(x) + 3 f'(x) - f(x) ) = a (0) = 0$. Therefore, $a v$ belongs to the set. \\
+\textbf{Since all 3 properties are satisfied, W is a subspace.}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item 
+\textbf{Property 1:} Since all subspaces have the zero (trivial) space, we are guaranteed that zero space lies in both U and W. In other words, we can say that zero lies in $U \cap W$. \\ 
+\textbf{Property 2:} Suppose $u,w \in U \cap W$. We then know that u is in U and also in W, whilewv is similarly in both U and W. Therefore, because U is a subspace and u and w are both contained in it, $u + w \in U$, and the same could be said for W. Therefore, it is evident that $u + w$ is in both U and W, and hence $u + w \in U \cap W$. \\
+\textbf{Property 3:} Let $u \in U \cap W$ and $a \in \mathbb{R}$. Since u lies in both U and W, which are subspaces, scalar multiplication is also closed in U and W. Therefore, $ax \in U$ and $ax \in W$. It then can be written as $ax \in U \cap W$. \\ \textbf{Since all 3 properties are satisfied, $U \cap W$ is a subspace.}
+
+\item
+\textbf{Property 2:} Let us pick an arbitrary $u \in U$ and $w \in W$. We say that U is part of the y axis subspace, while W is part of the x axis subspace. So, set $u = (1,0)$ and $w = (0,1)$. If we perform $u + w$ we get $(1,1)$ which is clearly not in either U or W. Therefore, $u + w \notin U \cup W$, and \textbf{this is not a subspace, as it fails the 2nd property.}
+
+\item
+\textbf{Property 1:} Since U,W are both subspaces, the zero space is contained in both. Therefore, $0 + 0 = 0 \in U + V$, and there exists at least one solution here. \\
+\textbf{Property 2:} Let $u,w \in U + W$. There exists an $a \in U$ and $b \in W$ which guarantees that $u = a + b$, and there exists a $c \in U$ and $d \in W$ which guarantees that $w = c + d$. Then, we have $u + w = (a + b) + (c + d) = (a + c) + (b + d)$. Since a,c is in the subspace U, $a + c \in U$, and since b,d is in the subspace W, $b + d \in W$. Therefore, it is evident that $u + w \in U + W$.\\
+\textbf{Property 3:} Let $u \in U + W$, there also exists an $a \in U$ and $b \in W$ such that $u = a + b$. Since U,W are subspaces, a scalar $r \in  \mathbb{R}$ can be applied, so $ra \in U$ and $rb \in W$. Then $ru = r(a + b) = ra + rb \in U + W$ \\ \textbf{Since all 3 properties are satisfied, $U + W$ is a subspace.}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Subspaces of the x-axis and the y-axis. You can scale each of them individually and they will still be in the same axis, i.e. $(cx,0)$ or $(0,by)$, but you cannot add the two together or they will not be on either axis.
+
+\item The set $\{(x,y) : x \geq 0, y \geq 0\}$. You can add the ordered pair $(x,y)$ all you want and still get something inside the set, but if you multiply by a negative scalar, it is no longer in the set.
+
+\item The set $\{(x,y) : x + y = 3\}$. Say that $u = (1,2)$ and $v = (2,1)$. If we multiply u by a scalar, $2u = (2,4)$, which is not included in the set. If we add $u + v$, the result is $(3,3)$, which is also not in the set. Therefore, this is NOT closed to addition and multiplication.
+
+\item A surface through the origin, a three dimensional line through the origin, and the point at the origin.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

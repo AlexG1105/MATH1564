@@ -43,11 +43,10 @@
 \begin{enumerate}
 
 \item A is invertible. $A^{-1} =  \left(\begin{array}{cc} 0.2 & 0.4 \\ 0.4 & -0.2 \end{array} \right)$
-\item B is not invertible because its rows and columns do not match. Its REF cannot be an identity matrix.
-\item F is not invertible because its rows and columns do not match. Its REF cannot be an identity matrix.
-\item C is not invertible because its rows and columns do not match. Its REF cannot be an identity matrix.
-\item D is invertible. $D^{-1} =  \left(\begin{array}{ccc} 0.1 & 0.3 & 0.3 \\ 0.5 & 0.5 & -0.5 \\ 0.3 & -0.1 & -0.1 \end{array} \right)$
-\item E is not invertible because its rows and columns do not match. Its REF cannot be an identity matrix.
+\item B is not invertible. Its REF is $\left(\begin{array}{cc} 1 & -3 \\ 0 & 0 \end{array} \right)$
+\item C is invertible. $C^{-1} =  \left(\begin{array}{cc} 2 & -3 \\ -1 & 2 \end{array} \right)$
+\item D is invertible. $D^{-1} =  \left(\begin{array}{ccc} 0.5 & -0.5 & 0.5 \\ 0.5 & 0.5 & -0.5 \\ -0.5 & 0.5 & 0.5 \end{array} \right)$
+\item E is not invertible. Its REF is $\left(\begin{array}{ccc} 1 & 0 & \frac{2}{3} \\ 0 & 1 & \frac{10}{3} \\ 0 & 0 & 0\end{array}\right)$
 
 \end {enumerate}
 
@@ -62,7 +61,20 @@ A^{-1} A \left(\begin{array}{c} x \\ y \end{array} \right) = A^{-1} \left(\begin
 \left(\begin{array}{c} x \\ y \end{array} \right) =  \left(\begin{array}{c} -0.6 \\ 0.8 \end{array} \right)
 $
 
-\item You cannot find $x,y$ which solve this equation because $B \left(\begin{array}{c}x\\y \end{array}\right)$ is undefined since their dimensions don't match.
+\item
+$
+B \left(\begin{array}{c} x \\ y \end{array} \right) = \left(\begin{array}{c} 1 \\ -2 \end{array} \right)
+\rightarrow
+\left(\begin{array}{cc} 1 & -3 \\ -2 & 6 \end{array} \right) \left(\begin{array}{c} x \\ y \end{array} \right) = \left(\begin{array}{c} 1 \\ -2 \end{array} \right)
+\rightarrow
+\left(\begin{array}{c} x - 3y \\ -2x + 6y \end{array} \right) = \left(\begin{array}{c} 1 \\ -2 \end{array} \right)
+\xrightarrow{R_2 + 2R_1} 
+\left(\begin{array}{c} x - 3y \\ 0 \end{array} \right) =  \left(\begin{array}{c} 1 \\ 0 \end{array} \right)
+$
+So: 
+$
+\left(\begin{array}{c} x \\ y \end{array} \right) =  \left(\begin{array}{c} 1\\ 0 \end{array} \right) + s \left(\begin{array}{c} 3 \\ 1 \end{array} \right)
+$
 
 \item
 $
@@ -70,10 +82,11 @@ DG = E
 \rightarrow
 D^{-1}DG = D^{-1}E
 \rightarrow
-G = \left(\begin{array}{ccc} 0.1 & 0.3 & 0.3 \\ 0.5 & 0.5 & -0.5 \\ 0.3 & -0.1 & -0.1 \end{array} \right)  
-       \left(\begin{array}{ccc} 3 & 0 & 2 \\ 2 & -1 & -2 \\ -1 & 2 & 6 \end{array} \right)
+G = \\
+\left(\begin{array}{ccc} 0.5 & -0.5 & 0.5 \\ 0.5 & 0.5 & -0.5 \\ -0.5 & 0.5 & 0.5 \end{array} \right)
+\left(\begin{array}{ccc} 3 & 0 & 2 \\ 2 & -1 & -2 \\ -1 & 2 & 6 \end{array} \right)
 \rightarrow
-G = \left(\begin{array}{ccc} 0.6 & 0.3 & 1.4 \\ 3 & -1.5 & -3 \\ 0.8 & -0.1 & 0.2 \end{array} \right)  
+G = \left(\begin{array}{ccc} 0 & 1.5 & 5 \\ 3 & -1.5 & -3 \\ -1 & 0.5 & 1 \end{array} \right)  
 $
 \end{enumerate}
 
@@ -95,7 +108,38 @@ $AB = \left(\begin{array}{cc} 0 & 0 \\ 2 & 2 \end{array} \right)$, and $CB = \le
 
 \begin{enumerate}
 
+\item \textbf{True}. If A,B are invertible square matrices, then we need to prove that $B^{-1}A^{-1}$ is the inverse of AB. Let us denote $B^{-1}A^{-1}$ as C. We want to show that $(AB)C = C(AB) = I$ since it is the definition of inverse matrices. Thus, if we plug in for C: $(AB)(B^{-1}A^{-1})$, by the associative property for matrices, $A(BB^{-1})A^{-1} = AIA^{-1} = AA^{-1} = I$. Indeed, $AB$ is invertible, and its inverse is equal to $B^{-1}A^{-1}$. This also works when we plug C in to the left side: $(B^{-1}A^{-1})(AB) = B^{-1}IB = I$
+
+\item \textbf{True}. If AB is invertible, then there exists a C so that $C(AB) = I$. Because matrices are multiplicatively associative, then we get $(CA)B = I$. We claim that B is invertable if $XB = I$. Denote $CA$ as $X$. Therefore, B is indeed invertible. On the other hand, if AB is invertible there exists a C so that $(AB)C = I$. Given the multiplicative association property of matrices, we get $A(BC)$. We claim that A is invertible if $AX = I$. Denote $CA$ as $X$. Therefore, A is indeed invertible.
+
+\item \textbf{False}. If $A,B \in M_{n}(\mathbb{R})$, fix $n = 2$, let us say that $A = \left(\begin{array}{cc} 1 & 1 \\ 0 & 0 \end{array} \right)$,
+$B = \left(\begin{array}{cc} 0 & 1 \\ 3 & 4 \end{array}\right)$.$A + B = \left(\begin{array}{cc} 1 & 2 \\ 3 & 4 \end{array} \right)$, and its inverse is
+$\left(\begin{array}{cc} -2 & 1 \\ 1.5 & -0.5 \end{array} \right)$, so it is indeed invertible. However, A has no inverse, so the statement is false.
+
+\item \textbf{False}. If $A,B \in M_{n}(\mathbb{R})$, fix $n = 2$, let us say that $A = \left(\begin{array}{cc} 1 & 2 \\ 3 & 4 \end{array} \right)$,
+$B = \left(\begin{array}{cc} 0 & -1 \\ -3 & -4 \end{array}\right)$.$A^{-1} = \left(\begin{array}{cc} -2 & 1 \\ 1.5 & -0.5 \end{array}\right)$,
+$B^{-1} = \left(\begin{array}{cc} \frac{4}{3} & -\frac{1}{3} \\ -1 & 0 \end{array}\right)$ so A,B are both invertible.
+$A + B = \left(\begin{array}{cc} 1 & 1 \\ 0 & 0 \end{array} \right)$, but the resulting matrix has no inverse. Therefore, the statement is false.
+
+\item \textbf{True}. If $AB$ is invertible, then from (b), we know that A and B are both invertible. Then, from question (a), we know that the multiplication of two invertible matrices are also invertible. Hence, $BA$, is invertible, proving our claim to be true.
+
+\item \textbf{True}. If $A^3$ is invertible, then there exists a B so that $A^3B = I$. We can rearrange this expression to $(AAA)B = I$. With the associative property of matrix products, we have $A(AAB) = I$. We claim that A is invertible if there exists some X so that $AX = I$. Indeed, denote $AAB$ as $X$, so $AX = I$, therefore A is invertible and the statement is true.
+
+\end{enumerate}
+
 \item
+
+\begin{enumerate}
+
+\item Let $A,B \in M_n(\mathbb{R})$, then set $A_{ij} = 0$ for all $i \neq j$. So, $A = \left(\begin{array}{ccc} a_{11} & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & a_{nn} \end{array}\right)$ 
+and $B = \left(\begin{array}{ccc} b_{11} & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & b_{nn} \end{array}\right)$. By regular matrix addition, each respective coordinate is added $a_{ij} + b_{ij}$, and
+$A + B = \left(\begin{array}{ccc} a_{11} + b_{11} & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & a_{nn} + b_{nn} \end{array}\right)$. Therefore, we conclude that $A + B$ is diagonal.
+Similarly, by regular matrix multiplication, $AB = \left(\begin{array}{ccc} a_{11} b_{11} & 0 & 0 \\ 0 & ... & 0 \\ 0 & 0 & a_{nn}b_{nn} \end{array}\right)$, so we also conclude that $AB$ is diagonal.
+
+\item Let $A,B,C,D \in M_n(\mathbb{R})$. Denote $AB$ as $C$, then in sum notation for matrix multiplication, $c_{ij} = \sum\limits_{k = 1}^n a_{ik}b_{kj}$, where $1 \leq i \leq n, 1 \leq j \leq n$. Since we are only interested in the trace of matrix C, which is given to us as $tr(C) = \sum\limits_{i = 1}^n (c)_{ii}$, we substitute in our multiplication equation and get
+$tr(C) = \sum\limits_{i = 1}^n \sum\limits_{k = 1}^n a_{ik}b_{ki}$. On the other hand, denote $BA$ as $D$, then in sum notation for matrix multiplication, $d_{ij} =  \sum\limits_{k = 1}^n b_{ik}a_{kj}$, where $1 \leq i \leq n, 1 \leq j \leq n$. Since we are only interested in the trace of matrix D, which is given to us as $tr(D) = \sum\limits_{i = 1}^n (d)_{ii}$, we substitute in our multiplication equation and get $tr(D) = \sum\limits_{i = 1}^n \sum\limits_{k = 1}^n b_{ik}a_{ki}$. Then, we reverse the sigmoids, and get $tr(D) = \sum\limits_{k = 1}^n \sum\limits_{i = 1}^n a_{ki}b_{ik}$. Because i and k take on the same values, they are interchangable, and thus tr(C) and tr(D) are equivalent. Therefore, $tr(AB) = tr(BA)$.
+
+\item The $ij$ entry of $AB$ can be written as $AB_{ij} = \sum\limits_{k = 1}^n a_{ik}b_{kj}$. If we transpose a matrix, we switch the rows with the columns, so\\ $(AB_{ij})^T = AB_{ji} = \sum\limits_{k = 1}^n a_{jk}b_{ki}$.\\ On the other hand, \\$(B^TA^T)_{ij} = \sum\limits_{k = 1}^n (B^T)_{ik}(A^T)_{kj} = \sum\limits_{k = 1}^n b_{ki}a_{jk}$. \\Since real numbers are multiplicatively communitive, these two outcomes are the same and the matrices are therefore equal. Thus, $(AB)^T = B^TA^T$.
 
 \end{enumerate}
 

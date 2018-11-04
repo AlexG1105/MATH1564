@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW6 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{False.} We want to check if $\left(\begin{array}{cc} 1 & 2 \\ 2 & -1 \end{array}\right)$ is a linear combination of the other three matrices given. Thus, we want to set each component of the matrix as a linear combination of the other components. So: 
+\[\sysdelim..\systeme{
+2x_1 - x_2 - 2x_3 = 1,
+          x_2 + x_3 = 2,
+x_1 +3x_2 + 2x_3 = 2,
+-x_1 - x_3 = -1
+}\]
+Because this is a linear system of equations, we can plug it into a matrix and turn it into RREF. Which is 
+$\left(\begin{array}{ccc|c} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right)$. The last row contains a lie, so therefore the statement is false.
+
+\item \textbf{True.} We want to check if each polynomial term is a linear combination of the given vector span. So, we set each coefficient of a term as a linear combination of the other components. So:
+\[\sysdelim..\systeme{
+x_1 + 2x_2 + 3x_3 = 2,
+x_2 -x_3 = 3,
+x_2 = 2,
+-x_1 = -1
+}\]
+Again, we plug into matrix and its RREF form is $\left(\begin{array}{ccc|c} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & -1 \\ 0 & 0 & 0 & 0 \end{array}\right)$. $x_1 = 1$, $x_2 = 2$, $x_3 = -1$, so we can conclude that this polynomial is indeed within the given span.
+
+\item \textbf{True.} To better represent the spans of matrices, lets say that each 2 by 2 matrix is actually 4 by 1. If we take the span of the three matrices on the right and bring them to RREF, we get $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{array}\right)$. This shows how the three vectors span all real numbers on the first three elements. If we take the span of the two matrices on the left and bring them to RREF, we get $\left(\begin{array}{cc} 1 & 0 \\ 0 & 1 \\ 0 & 0 \\ 0 & 0 \end{array}\right)$, which spans all real numbers but on the first two elements. Clearly, the vectos that span all real numbers on the top two elements will be contained in the vectors that span all real numbers on the top three elements. Therefore, this statement is true.
+
+\item \textbf{True.} If we reduce the two matrices on the left to RREF, we get $\left(\begin{array}{cc} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{array}\right)$. Subsequently, if we reduce the three matrices on the right to RREF, we get $\left(\begin{array}{ccc} 1 & 0 & 1\\ 0 & 1 & -2\\ 0 & 0 & 0\end{array}\right)$. What this tells us is that both of these span all real numbers on the top two elements, but they also don't span the bottom element. Therefore, they are equal.
+
+\item \textbf{True.} If we take the two vectors and take the RREF, we get $\left(\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\right)$. It is then clear that this spans all $\mathbb{R}^2$.
+
+\item \textbf{False.} If we take the two vectors and take the RREF, we get $\left(\begin{array}{cc} 1 & -1 \\ 0 & 0 \end{array}\right)$. This spans all real numbers on only the top element, so it is not a spanning set for all $\mathbb{R}^2$.
+
+\item \textbf{True.} Let us represent the coefficients for each polynomial element as a four tall matrix. Then, we squish the matrices together and take the RREF to be $\left(\begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array}\right)$. We can then conclude that all the given polynomials span all the elements of $\mathbb{R}_3[x]$.
+
+\item \textbf{False.} For ease of visualization let us pretend that the 2 by 2 matrices are actually 4 by 1. If we squish together the three matrices, and take their RREF, we get $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{array}\right)$. Clearly, the three vectors do not span the last element, so we can conclude that they don't span all $M_2(\mathbb{R})$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \{$\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 0 & ... \\ 0 & ... & 0_n \end{array}\right)$,
+$\left(\begin{array}{ccc} 0 & 0 & 0 \\ 0 & 1 & ... \\ 0 & ... & 0_n \end{array}\right)$, ..., 
+$\left(\begin{array}{ccc} 0 & 0 & 0 \\ 0 & 0 & ... \\ 0 & ... & 1_n \end{array}\right)$\}
+
+\item \{$\left(\begin{array}{c} 1 \\ 1 \\ 3 \\ 0 \end{array}\right)$, $\left(\begin{array}{c} 1 \\ -2 \\ 0 \\ -1 \end{array}\right)$,
+$\left(\begin{array}{c} 1 \\ 0 \\ -2 \\ 4 \end{array}\right)$\}
+
+\item \{$\left(\begin{array}{cc} -2 & 1 \\ 0 & 0 \end{array}\right)$, $\left(\begin{array}{cc} 0 & 0 \\ -2 & 1 \end{array}\right)$\}
+
+\item \{$1$\}
+
+\item \{$1, x^2, ..., x^{2k}: k \in [n]$\}
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item For ease, lets represent the matrices as 4 by 1 instead of 2 by 2. We use these vectors and then create a large matrix A, then we find the RREF of subsequent $(A|0)$: $\left(\begin{array}{ccc|c} 1 & 0 & 0 & 0\\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 0\end{array}\right)$. Clearly, the only solution that exists is the trivial solution. Therefore, we know that the linear combination for 0 only has the trivial solution and this is \textbf{linearly independent}.
+
+\item We use these vectors to create a large 3 by 3 matrix A, then we find the RREF of subsequent $(A|0)$: $\left(\begin{array}{ccc|c} 1 & 0 & 1 & 0\\ 0 & 1 & -2 & 0\\ 0 & 0 & 0 & 0\end{array}\right)$. Thus, we know that because the third column is a free variable, infinite solutions exist to get 0 (not just the trivial solution), so this is \textbf{linearly dependent}.
+
+\item We represent the coefficient of each element of the polynomial as a four tall matrix. We then use those vectors to create a large 4 by 4 matrix called A, and then we find the RREF of subsequent $(A|0)$:  $\left(\begin{array}{cccc|c} 1 & 0 & 0 & -1 & 0 \\ 0 & 1 & 0 & 1 & 0\\ 0 & 0 & 1 & 0 & 0\\ 0 & 0 & 0 & 0 & 0\end{array}\right)$. It is clear that the fourth column is a free variable, and that infinite solutions exist to get the 0. Therefore, this is \textbf{linearly dependent}.
+
+\item This is \textbf{linearly dependent}. Let us first plug x for 1. As always, the trivial solution exists, so we want to prove there exists a solution that is not trivial and can yield us 0. So, we do $(1 * f(x)) + (1 * g(x)) - (1 * h(x)) = (1 * sin^2(x)) + (1 * cos^2(x)) - (1 * 1) = 1 - 1 = 0$. Therefore, since there is indeed a non trivial solution, this system is linearly dependent.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{True.} If ${w_1,w_2,w_3}$ is linearly independent, that would mean $aw_1 + bw_2 + cw_3 = 0$ only when $a,b,c = 0$. So, let us consider the relationship $d(w_1 + w_2 + w_3) + e(w_2 + w_3) + f(w_3) = 0$, and rewrite this as $(d + e + f) w_1 + (e + f)w_2 + (f)w_3 = 0$. Let us set $(d)$ as a, $(d + e)$ as b, and $(d + e + f)$ as c. We then have the system: 
+\[\sysdelim..\systeme{
+d + e + f = 0,
+d + e = 0,
+d = 0
+}\]
+It is then clear that $d,e,f = 0$, and therefore, the set only has a trivial solution, meaning that it is linearly dependent.
+\item \textbf{False.} We will prove this by providing a solution to 0 that isn't trivial, in other words, find $a,b,c$ such that $a(w_1 + 2w_2 + w_3) + b(w_1 + w_2) + b(w_2 + w_3) = 0$. Select $a = 1, b = -1, c = -1$ so $1(w_1 + 2w_2 + w_3) - 1(w_1 + w_2) - 1(w_2 + w_3) = w_1 - w_1 + 2w_2 - w_2 - w_2 + w_3 - w_3 = 0 + 0 + 0 = 0$. Therefore, there exists a solution that isn't trivial, so it is linearly dependent.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{False.} Say that $S = {1,x}$ and $T = {1,x,1+x}$. Clearly, $S \subset T$, but T is not independent, as its third element can be identified as a linear combination of the first two. Therefore, T is dependent despite it being the superset of a linearly independent set.
+
+\item \textbf{True.} If $S \subset T$ and $S = T$, it is already linearly independent and the statement is satisfied. Otherwise, denote $(t_1, t_2, ... ,t_n) \in T$, then it is linearly dependent if for $a_1, ..., a_n$, $a_1t_1 + a_2t_2 +... +a_nt_n = 0$ only when $a_1,...,a_n = 0$. Since S is a subset of T, by definition all of the elements of S are in T. It should then be clear that all elements of S could be represented by some elements in T. Therefore, it suffices to say that, the trivial solution would also be true for S, making it linearly independent.
+
+\item \textbf{True.} By definition, $S \cap T$ must include elements from both S and T, also meaning that it is a subset of S and T. Since we are given that S and T are linearly independent and that we proved in the previous question how subsets of a linear independent system yields another linear independent set, then $S \cap T$ is also linearly independent. The other case is if $S \cap T$ is empty, in which that is covered in the proposition.
+
+\item \textbf{False.} Say $S = (1,x)$ and $T = (2,2x)$. These two are linearly independent. However $S \cup T$ is $(1,2,x,2x)$, and we see that this is no longer linearly independent, since the second and fourth elements can be obtained by the others.
+
+\item \textbf{True.} \\Forwards proof. Given our definition of subspace addition, and the fact that W,U are subspaces since a span yields a subspace, then if $x \in W + U$, $x = aw + bu$ where $w \in W, u \in U$ and $a,b \in \mathbb{R}$. We can see immediately that $x \in Span(W \cup U)$ because x is a linear combination of elements from both W and U. \\ Backwards proof. If $x \in Span(W \cup U)$, there exists $w_1,...,w_n \in W$ and $u_1,...,u_m \in U$ so that x is a linear combination of the two, $x = aw_i + bu_k$ for $i \in [n], k \in [m]$. Therefore $x \in Span(W) + Span(U)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{True.} For $\{v_1,...,v_n\}$ to be linearly independent, it would mean for its subsequent matrix A put together to have only the trivial solution to $(A|0)$. For there to be more columns (n) than rows (m), it would mean that not every column can be a pivot variable, and there is bound to be a free variable. Any presence of a free variable means that there are infinite solutions to the linear system $(A|0)$, thus making it not linearly independent. So, because we are given that $\{v_1,...,v_n\}$ is linearly independent, its subsequent linear system $(A|0)$ cannot contain any free variables, meaning that $n \leq m$, which at least guarantees a pivot in each column.
+
+\item \textbf{False.} As an example, we could have $\{v_1 = \left(\begin{array}{c} 1 \\ 0 \end{array}\right),v_2 = \left(\begin{array}{c} 1 \\ 0 \end{array}\right)\}$. In this scenario, $m = n$, but in their subsequent RREF matrix, it is obvious that there is a free variable, which means that this system is linearly dependant.
+
+\item \textbf{True.} To span $\mathbb{R}_m$, all the rows in the RREF form of the subsequent combined matrix must not be zero. In the case where there is a zero row, that means the current $\{v_1, ... ,v_n\}$ does not span that row since you can only scale or add 0. Therefore, only in the case where $m>n$ do we have a row of zeros. This is because there can be a max of n leading variables, and if there are more rows than columns, the last rows would not have leading variables and thus be zero rows. So, if we know that $\{v_1,...,v_n\}$ spans $\mathbb{R}^m$, then it cannot be possible for $m>n$, so we are guaranteed that $m \leq n$.
+
+\item \textbf{False.}As an example, we could have $\{v_1 = \left(\begin{array}{c} 1 \\ 0 \end{array}\right),v_2 = \left(\begin{array}{c} 1 \\ 0 \end{array}\right)\}$. In this scenario, $m = n$, but in their subsequent RREF matrix, it is obvious that there is a row of zeros on the bottom, meaning that it cannot span the all of $\mathbb{R}^m$.
+
+\item \textbf{True.} We can prove this to be true by using what we stated in the first and third part of this question. If $\{v_1,...,v_n\}$ is both linearly independent and spans $\mathbb{R}^m$, this is basically a combination of true claims from parts 1 and 3 of this question. The two suggest that $n \leq m$ and $n \geq m$, which is $n = m$ for both to be true. Therefore, we reach that if $\{v_1,...,v_n\}$ is both linearly independent and spans $\mathbb{R}^m$, then $n = m$.
+
+\item \textbf{True.} To prove the forward direction, we know when rows are equal to columns, there would be no free variables in its combined matrix's RREF form which is guaranteed by a linearly independent system. Since all of the columns possess a pivot variable, it is natural to assume that there is some leading variable in each row since number of columns equal the number of rows. Therefore, there is no zero row and we have also shown that the vectors span $\mathbb{R}^m$. To prove the backwards direction, if $\{v_1,...,v_n\}$ spans $\mathbb{R}^m$, there is no zero row in its subsequent combined matrix denoted as A. In a square matrix, if there is no zero row, each row would have a leading variable, which subsequently means each column should have a pivot since number of rows equal number of columns. Therefore, since each column has a pivot, the solution to $(A|0)$ is the trivial solution. Therefore, since there is only the trivial solution, we have proved that $\{v_1,...,v_n\}$ is linearly independent.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
