@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW8 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+\large
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Denote $(a_1,...,a_k)$ as the basis for $U \cap W$. Since this is true, then $(a_1,...,a_k) = B \cap C$. From this, we now want to find a specific basis for B and C. Note that we can add any element to $(a_1,...,a_k)$ to make it a basis for B and C, since any linearly independent set can be completed into a basis. Therefore let us denote $(a_1,...,a_k,b_1,...,b_n)$ as the basis for B and $(a_1,...,a_k,c_1,...,c_m)$ as the basis for C. It's now clear that there does indeed exist a basis B and C such that $B \cap C$ is the basis for $U \cap W$.
+
+\item No. We say that $U,W \subseteq V$ are two subspaces of vector space $V = \mathbb{R}_1[x]$. Then let us say $(1,x)$ is B, a basis for U, and $(2,2x)$ is C, a basis for W. Clearly, $B \cup C$ is the empty set, which is not a basis for anything but zero. Therefore, this statement is false.
+
+\item Building off of the last question, let's say that $(a_1,...,a_k)$ is the basis for $U \cap W$, $(a_1,...,a_k,b_1,...,b_n)$ be the basis for U, and $(a_1,...,a_k,c_1,...,c_m)$ be the basis for W. Then, the right hand side of the equality is equal to $m+n+k$. On the left side, let us claim that the basis to $U+W$ is $(a_1,...,a_k,b_1,...,b_n,c_1,...,c_m)$. To prove this is a basis we will first show that it is a spanning set. By definition $U+W$ is the set of all $u+w$ for $u \in U, w \in W$. This similarly means that $U+W$ will be the linear combination of all elements in U and W. Therefore, the basis, which is a combination of unique elements from U and W, spans all of $U+W$. The next step is to prove this basis is linearly independent. We can see that it is, since the elements $a_1,...,a_k$ are linearly independent belonging to both U and W, and $b_1,...,b_n$ are linearly independent and unique to U, while $c_1,...,c_m$ are linearly independent and unique to W. Therefore, this is indeed a basis, and its dimension is henceforward equal to $m + n + k$, meaning that the equation holds true.
+
+\item Since the dimension of U and W are equal to 3, that means their basis should have three elements. Recall how if a set contains a zero, it is no longer linearly independent, and thus any set with a 0 cannot be a basis. Therefore, we can be certain that the subspaces of U,W span all real numbers for each of their polynomial terms. That means that $U \cap W$ cannot be equal to just the 0 set.
+
+\item Let us begin by finding the equivalent reduced rows for each of these spans by putting the vectors in rows and finding the RREF. It comes out to be \\ $span\{\left(\begin{array}{c} 1 \\ 0 \\ \frac{7}{3} \\ \frac{1}{3} \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ -\frac{1}{3} \\ \frac{2}{3} \end{array}\right) \} \cap span\{ \left(\begin{array}{c} 1 \\ 0 \\ 0 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ 2 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 0 \\ 0 \\ 1 \end{array}\right) \}$. The left spans the first 2 components in $\mathbb{R}^4$, and the right spans the first, second, and fourth components in $\mathbb{R}^4$. The two of these both span the first two elements, which can be expressed in two dimensions. Therefore the dimension of this is 2.
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{True.} For example, the matrix $A = \left(\begin{array}{ccc} 1 & 0 & 0 \\ 1 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{array}\right)$ gives us a scenario where the last row is not a linear combination of the other rows.
+
+\item \textbf{True.} For example, the matrix $A = \left(\begin{array}{ccc} 2 & -1 & -1 \\ 2 & -1 & -1 \\ 5 & -5 & 0 \end{array}\right)$ satisfies this relationship.
+
+\item \textbf{False.} Let us construct an arbitrary matrix over all real numbers given by $A = \left(\begin{array}{ccc} a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \\ c_1 & c_2 & c_3 \end{array}\right)$. Let us acquire a system of equations from the operation $A \left(\begin{array}{c} 1 \\ 1 \\ 1 \end{array}\right) = 0$ and $A \left(\begin{array}{c} 1 \\ -1 \\ 1 \end{array}\right) = 0$. When we simplify everything, we find that $a_2, b_2, c_2 = 0$ in order for the matrix to satisfy these equations. We are then left with the following matrix $A = \left(\begin{array}{ccc} a_1 & 0 & a_3 \\ b_1 & 0 & b_3 \\ c_1 & 0 & c_3 \end{array}\right)$. When we perform the same equations on this matrix, we find that $a_1 = -a_3, b_1 = -b_3, c_1 = -c_3$. This results in the matrix $A = \left(\begin{array}{ccc} a_1 & 0 & -a_1 \\ b_1 & 0 & -b_1 \\ c_1 & 0 & -c_1 \end{array}\right)$. From this point, it is clear that the matrix can only have a rank of 1. Therefore, the statement is false.
+
+\item \textbf{True.} Some time ago, we noted that row operations on a matrix do not affect the solution of a augmented matrix. What this also means is that row operations do not affect the column space of a matrix, meaning that row equivalency will not change the column space. Therefore, there indeed exissts two matrices that fit this requirement.
+
+\item \textbf{False.} Matrix A fits the definition of invertibility (there exists a B such that $AB = I_n$) and matrix B fits the definition of invertibility (there exists an A such that $AB = I_n$). Since these two are invertible, another requirement for them is for their reduced echelon form to be equal to the identity matrix. Since the addition of these two ranks equal 5, it means that either A or B will end up with rank 2 or lower, meaning that this specific matrix has a free variable when in RREF form. As we know, a matrix with a free variable cannot be the identity matrix, and therefore this statement is false.
+
+\item \textbf{True.} The identity matrix fits this requirement.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{False.} If we have a matrix $A = \left(\begin{array}{cc} 1 & 2 \\ 3 & 4 \end{array}\right)$ and $B = \left(\begin{array}{cc} 5 & 6 \\ 7 & 8 \end{array}\right)$, it is evident that their ranks are both 2. On the other hand $AB = \left(\begin{array}{cc} 19 & 22 \\ 43 & 50 \end{array}\right)$ which has a rank of 2. Clearly, $2 * 2 \neq 2$, so therefore this statement is false.
+
+\item \textbf{False.} For the identity matrix, we have the null space equal to the zero vector in $\mathbb{R}^n$. But, the column space is the standard basis for $\mathbb{R}^n$ , so clearly these two are not the same.
+
+\item \textbf{True.} $(A|b)$ has a solution \\ $\Leftrightarrow$ b is a linear combination of the columnspace of A, denoted as $v_1,...,v_n$ \\ $\Leftrightarrow$ $span\{v_1,...,v_n\} = span\{v_1,...,v_n, b\}$ as proved in class \\ $\Leftrightarrow$ $col(v_1,...,v_n) = col(v_1,...,v_n|b)$ \\ $\Leftrightarrow$ $dim(col(v_1,...,v_n)) = dim(col(v_1,...,v_n|b))$ \\ $\Leftrightarrow$ $rank(A) = rank(A|b)$
+
+\item \textbf{False.} The matrix $A = \left(\begin{array}{cc} 1 & 2 \end{array}\right)$ proves this to be incorrect. Since the row space has only one element, it is linearly independent. However, the column space consist of two 1 space vectors, which are not linearly independent since they can be a linear combination of each element. Therefore, this statement is false.
+
+\item \textbf{True.} In a square matrix, if the rows are linearly independent, that means in RREF form there is a pivot in each row. Furthermore, it means that all of the rows have a pivot, and it is equal to the identity matrix. In the identity matrix, the homogeneous solution is the trivial one. That means the columnspace is also linearly independent. Therefore, this statement is true.
+
+\end{enumerate}
+
+\item \textbf{Forward proof:} If A is invertible, then its equivalent RREF form is the identity matrix. In an identity matrix, its columns (and rows) are a basis for $\mathbb{R}^n$ as they are the standard basis. This means that there can never be a case where the columnspace is linearly dependent and its dimension is less than the original. Therefore, the rank of A must be equal to n. \\
+\textbf{Backwards proof:} From a theorem in the class lectures, we know that for a matrix $A \in M_{mxn}(\mathbb{R})$, then n = rank(A) + dim(nullspace). Since rank(A) = n, it is true that the dimension of the null space must be equal to 0, which means that the null space consists of zero. Recall that the null space is the solution to the homogeneous solution $(A|0)$. Therefore, since $(A|0)$ only has the trivial solution, it is by definition an invertible matrix.
+
+\item Since we are given $AB = 0$, that means every entry of $AB = 0$. By definition, all of the columns $c_i$ in B satisfy the relationship such that $A c_i = 0$. In other words, all $c_i$ of B are in the nullspace of A. This implies that the col(B) $\subseteq$ null(A) $\Leftrightarrow$ dim(col(B)) $\leq$ dim(null(A)) $\Leftrightarrow$ rank(B) $\leq$ n - rank(A) $\Leftrightarrow$ rank(A) + rank(B) $\leq$ n
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{False.} Denote matrix A as $\left(\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\right)$ and matrix B as $\left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right)$. Both of their ranks are 2. However, the addition of these two matrices results in $\left(\begin{array}{cc} 1 & 1 \\ 1 & 1 \end{array}\right)$ which is of rank 1. Clearly, $2 + 2 \neq 1$, so this statement is false.
+
+\item \textbf{True.} Since the columns of A + B are a linear combination of the columns in A and columns in B, the columnspace of A + B is contained in col(A) + col(B). Therefore, it implies that dim(col(A+B)) $\leq$ dim(col(A)) + dim(col(B)). This means rank(A+B) $\leq$ rank(A) + rank(B).
+
+\end{enumerate} 
+
+\item
+
+\begin{enumerate}
+
+\item Let us denote matrix B with columns $c_i$. Therefore, the nullspace of B is the set of solutions to $c_1 x_1 + ... + c_i x_i = 0$. Subsequently, a matrix AB, by its definition, has in its rows $A c_i$. Therefore, the nullspace of AB is the set of solutions to $A c_1 x_1 + ... + A c_i x_i = 0$, which is also equivalent to $A (c_1 x_1 + ... + c_i x_i) = 0$. First off, we want to show that the nullspace of B is contained in the nullspace of AB. This is true, because the vector which is in the nullspace of B results in the following equality: $A (0) = 0$, so nullspace of B is contained within the nullspace of AB. Furthermore, we proved in class that null space is indeed a subspace (kerT), so it also true that nullspace of A is a subspace of the nullspace of AB (which is also a subspace of V).
+
+\item The multiplication of to matrices A,B result in a matrix in which its columns are equal to $(A b_1,..., A b_k)$ when $b_1,...,b_k$ are the columns in B. Immediately we see that the columns in this new matrix are the result of linear combinations from the columns of original matrix A. Therefore, each column in AB can be obtained from the columns of A, which means that the columnspace of AB is contained in columnspace of A. Further, we reason that col(AB) is a subspace of col(A) because we know that columnspaces are subspaces.
+
+\item From part i, we can show that if null(B) is a subspace of null(AB), then it means dim(null(B)) $\leq$ dim(null(AB)). With the equation we learned in class, we can plug it into the inequality expression: $k - rank(B) \leq k - rank(AB)$. Then, if we simplify it, we get $rank(AB) \leq rank(B)$. On the other hand, from part ii, we know that the col(AB) is a subspace of col(A), which means dim(col(AB)) $\leq$ dim(col(A)). This means rank(AB) $\leq$ rank(A), and if we take from before where rank(AB) $\leq$ rank(B), this is equivalent to saying that rank(AB) $\leq$ min(rank(A),rank(B)). 
+
+\item Let us start with this case where the matrix A has a rank of 3. In this scenario, it means that A is invertible since each of its rows would have a leading variable, meaning that its RREF form would be the identity matrix. Since A is invertible, $A^2$ would also be invertible as proved in a previous homework. If $A^2$ is also invertible, that would mean its rank would also be 3 since its RREF form is the identity matrix. We have thus proved that none of A, $A^2$, $A^3$ can have a rank of 3, otherwise the ranks would not be different numbers. Thus, we are left with rank(A) = 2. Using the proved statement in the previous question, that would mean that rank($A^2$) is either equal to or less than 2. Because the question states they are different rank numbers, the rank of $A^2$ can only be 1. Furthermore, the rank of $A^3$ has to be less than or equal to 1, and since the question states that they are different numbers, the rank of $A^3$ can only be 0. Therefore, since only the zero matrix has a rank of zero, $A^3 = 0$. If the rank of A was 1 or 0, it would result in equal numbers as we get to the rank of $A^2$ and $A^3$ which is contradictory to the statement in the given question.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
