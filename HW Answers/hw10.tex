@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW10 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{Is a linear transformation.}  We first want to prove that this satisfies the summation condition. For $v_1,v_2 \in V$ where $v_1 = \left(\begin{array}{c} x_1 \\ y_1 \\ z_1 \end{array}\right), v_2 = \left(\begin{array}{c} x_2 \\ y_2 \\ z_2 \end{array}\right)$,\\ $T(v_1 + v_2) = \left(\begin{array}{cc} (x_1 + x_2) + (y_1 + y_2) & (y_1 + y_2) - 2 (z_1 + z_2) \\ 3(x_1 + x_2) + (z_1 + z_2) & 0 \end{array}\right)$. Through properties of real numbers and matrices, we arrange the statement to $\left(\begin{array}{cc} x_1 + y_1 & y_1 - 2z_1 \\ 3x_1 + z_1 & 0 \end{array}\right) + \left(\begin{array}{cc} x_2 + y_2 & y_2 - 2z_2 \\ 3x_2 + z_2 & 0 \end{array}\right)$. This is equivalent to $T (v_1) + T (v_2)$ and therefore satisfies summation. Next we want to prove the multiplication condition. For the same $v_1$ and scalar $a \in \mathbb{R}$, we show that $T(av_1) = \left(\begin{array}{cc} a(x_1 + y_1) & a(y_1 - 2z_1) \\ a(3x_1 + z_1) & 0 \end{array}\right)$. With the definition of matrix multiplication by scalar, this is equivalent to \\ $a \left(\begin{array}{cc} x_1 + y_1 & y_1 - 2z_1 \\ 3x_1 + z_1 & 0 \end{array}\right) = a T(v_1)$ which satisfies multiplication by scalar.
+
+\item \textbf{Is a linear transformation.} To prove summation condition, for $v_1,v_2 \in V$ and $a,b \in \mathbb{R}$ where $v_1 = a_1 x^2 + a_2 x + a_3, v_2 = b_1 x^2 + b_2 x + b_3$, we want to show that $T(v_1 + v_2) = T(v_1) + T(v_2)$. $T(v_1 + v_2) = \left(\begin{array}{c} 4(a_1 + b_1) + 2(a_2 + b_2) + (a_3 + b_3) \\ 4(a_1 + b_1) + (a_2 + b_2) \\ 2(a_1 + b_1)\end{array}\right) = \left(\begin{array}{c} 4a_1 + 2a_2 + a_3 \\ 4a_1 + a_2 \\ 2a_1 \end{array}\right) + \left(\begin{array}{c} 4b_1 + 2b_2 + b_3 \\ 4b_1 + b_2 \\ 2b_1 \end{array}\right) = T(v_1) + T(v_2)$. Next we want to prove multiplication property. Using $v_1$ from before and scalar $s \in \mathbb{R}$, $T(sv_1) = \left(\begin{array}{c} s (4a_1 + 2a_2 + a_3) \\ s (4a_1 + a_2) \\ s(2a_1) \end{array}\right) = s T(v_1)$. This satisfies the multiplication property.
+
+\item \textbf{Not a linear transformation.} Say our matrix in v is $\left(\begin{array}{cc} 1 & 1 \\ 0 & 0 \end{array}\right)$. $T(2v) = \left(\begin{array}{cc} 4 & 4 \\ 0 & 0 \end{array}\right)$. But this is equal to $4v$, so multiplication property is incorrect.
+
+\item \textbf{Is a linear transformation.} To prove summation condition, for $v_1,v_2 \in V$ and $a,b \in \mathbb{R}$ where  $v_1 = a_1 x^2 + a_2 x + a_3, v_2 = b_1 x^2 + b_2 x + b_3$, we want to show that $T(v_1 + v_2) = T(v_1) + T(v_2)$. $T(v_1 + v_2) $ evaluates to $\int_{0}^{1} (a_1 + b_1)x^2 + (a_2+b_2)x + (a_3 + b_3) dx$. Since we can split integrals, this is also equivalent to $\int_{0}^{1} a_1x^2 + a_2x + a_3 dx + \int_{0}^{1} b_1x^2 + b_2x + b_3 dx = T(v_1) + T(v_2)$. Thus, summation is satisfied. Then, to prove the multiplication property, using $v_1$ and a scalar $s \in \mathbb{R}$, $T(sv_1) = \int_{0}^{1} s(a_1x^2 + a_2x + a_3) dx = s \int_{0}^{1} a_1x^2 + a_2x + a_3 dx = sT(v_1)$. Therefore, this satisfies the multiplication property.
+
+\item \textbf{Is a linear transformation.} To prove summation condition, say $A_1, A_2$ are ambiguous matrices and $B$ is the fixed matrix. $T(A_1 + A_2) = (A_1 + A_2) B = (A_1 B) + (A_2 B) = T(A_1) + T(A_2)$. Thus it satisfies the summation condition. Next, to show that it satisfies multiplication, for some scalar $s \in \mathbb{R}$, $T(sA_1) = (sA_1)B = s(A_1 B) = sT(A_1)$. Thus, they are the equivalent and multiplication property is satisfied.
+
+\item \textbf{Not a linear transformation.} $T\left(\begin{array}{cc} 1 & 1 \\ 1 & 1 \end{array}\right) = \left(\begin{array}{cc} 1 & 7 \\ -8 & 2 \end{array}\right)$. If we scale this matrix by 2, $T(2A) = \left(\begin{array}{cc} 1 & 12 \\ -8 & 4 \end{array}\right)$. However, $2 T(A) = \left(\begin{array}{cc} 2 & 14 \\ -16 & 4 \end{array}\right)$. Thus, $T(2A) \neq 2T(A)$ and we do not have a linear transformation.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item 
+
+\begin{enumerate}
+
+\item The basis for the kernel is $\left(\begin{array}{c} -1 \\ 1 \\ -1 \end{array}\right)$. The basis for the image is $\left(\left(\begin{array}{c} 1 \\ 0 \\ 0 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ 0 \\ 0 \end{array}\right)\right)$.
+
+\item The dimension of the kernel is 1, and the dimension of the image is 2.
+
+\item The transformation is not onto, since according the theorem from class, T is onto if and only if the image of T is equal to W. In this case, $\mathbb{R}^4$ is not spanned by the basis for the image since its dimension is only 2.
+
+\item The transformation is not 1-1. From the theorem in class, T is 1-1 if and only if its kernel is equal to 0, which in this case, it is not.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item The basis for the kernel is $\left(\left(\begin{array}{cc} 2 & 3 \\ 0 & 0 \end{array}\right),\left(\begin{array}{cc} 0 & 0 \\ 2 & 3 \end{array}\right)\right)$. The basis for the image is $\left(\left(\begin{array}{c} 1 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \end{array}\right)\right)$.
+
+\item The dimension of the kernel is 2, and the dimension of the image is 2.
+
+\item S is onto if and only if W equals image. This holds true, since the basis for the image spans all of $\mathbb{R}^2$. Therefore, the transformation is onto.
+
+\item S is 1-1 if and only if the kernel equals 0. Since the dimension of the kernel is not 0, it is not equal to 0, and thus the transformation is not 1-1.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item The basis for the kernel is $(-\frac{3}{7}x^3 + x^2,1)$, and the basis for the image is $\left(\left(\begin{array}{c} 1 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \end{array}\right)\right)$
+
+\item The dimension of the kernel is 2, and the dimension of the image is 2.
+
+\item L is onto if and only if W equals image. This holds true, since the basis for the image spans all of $\mathbb{R}^2$. Therefore, the transformation is onto.
+
+\item L is 1-1 if and only if the kernel equals 0. Since the dimension of the kernel is not 0, it is not equal to 0, and thus the transformation is not 1-1.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item The basis for the kernel is the empty set, and the basis for the image is $(1,x,x^2,x^3)$.
+
+\item The dimension of the kernel is 0, and the dimension of the image is 4.
+
+\item Onto, because W equals image. In other words, the vector space $\mathbb{R}_3[x]$ is spanned by the basis for the image.
+
+\item 1-1, because the kernel equals 0, since its dimension is 0.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item This statement is false (it has to be 1-1 in order for it to be true). Let us say T is the linear transformation that maps vectors to the real number 0. The vectors $\left(\begin{array}{c} 1 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \end{array}\right)$ are linearly independent, but the linear transformation of the two vectors are both equal to 0, meaning that they are not linearly independent.
+
+\item True. Let us consider for all scalars $a \in \mathbb{R}$, $a_1v_1 + ... + a_nv_n = 0$. Since the kernel maps over to the zero of W, we have: $$T(0_v) = T(a_1 v_1 + ... + a_n v_n)$$ $$0_w = T(a_1v_1) + ... + T(a_nv_n)$$ $$0_w = a_1T(v_1) + ... + a_nT(v_n)$$ Thus, $a_1,...,a_n$ is equal to zero since we are given that $Tv_1,...,Tv_n$ is linearly independent. That would also imply in our original equation that $v_1,...,v_n$ is linearly independent in V.
+
+\item This statement is false. Let us say $\left(\begin{array}{c} 1 \\ 0 \end{array}\right),\left(\begin{array}{c} 0 \\ 1 \end{array}\right)$ spans the space $\mathbb{R}^2$. Now, let us define T as the linear transformation $\mathbb{R}^2 \rightarrow \mathbb{R}^2$ which maps the vector $\left(\begin{array}{c} a \\ b \end{array}\right) \rightarrow \left(\begin{array}{c} a \\ 0 \end{array}\right)$. Thus, the vectors we gave that span $\mathbb{R}^2$ now become $\left(\begin{array}{c} 1 \\ 0 \end{array}\right), \left(\begin{array}{c} 0 \\ 0 \end{array}\right)$, but they clearly don't span W.
+
+\item True. Since $Tv_1,...,Tv_n$ spans W, we know that the image of V is equal to W. Therefore, from a theorem proved in class, if image of V equals W, then T is onto. Next, since $Tv_1,...,Tv_n$ is a spanning set in W, we know that for some $a \in \mathbb{R}, w \in W$, $w = a_1Tv_1 + ... + a_nTv_n$. If we recall, since T is onto, it means that every w has at least one preimage in V such that $Tv = w$. Thus, it is equivalent to say that $Tv = T(a_1v_1 + ... + a_nv_n)$, then $v = a_1v_1 + ... + a_nv_n$ for all $v \in V$, so it thus suffices to say that $v_1,...,v_n$ spans V.
+
+\item To prove that T(U) is a subspace of W, we first want to show that it is not empty. We know that it is not empty because U, which is a subspace of V, must contain the $0_v$ which maps over to $0_w$ by definition. Thus T(U) must contain $0_w$, so it is not empty. Next, we want to show that it is closed to addition. So, say that $u_1,u_2$ are in T(U) such that $T(v_1) = u_1$ and $T(v_2) = u_2$. We then claim that $v_1 + v_2$ is a preimage of $u_1 + u_2$. Then, $T(v_1 + v_2) = Tv_1 + Tv_2 = u_1 + u_2$. Thus, $u_1 + u_2 \in T(U)$. Finally, we want to prove that it is closed to multiplication by scalar. This is very similar, we simply take scalar $a \in \mathbb{R}$ and $u_1 \in T(U)$ such that $T(v_1) = u_1$. We then claim that $av_1$ is a preimage of $au_1$. So, $T(av_1) = aT(v_1) = au_1$, and $au_1 \in T(U)$. Therefore, all three properties are satisfied and T(U) is a subspace of W.
+
+\item Let us say T:$\mathbb{R}^2 \rightarrow \mathbb{R}^2$ is a linear transformation given by the following: $\left(\begin{array}{c} a \\ b \end{array}\right) \rightarrow \left(\begin{array}{c} 0 \\ 0 \end{array}\right)$. So, a let's chose a single vector subset of V given by $\left(\begin{array}{c} 1 \\ 0 \end{array}\right)$. When we apply the linear transformation, it becomes $\left(\begin{array}{c} 0 \\ 0 \end{array}\right)$ which is a subspace of $\mathbb{R}^2$. However, the original vector is not a subspace of $\mathbb{R}^2$.
+
+\end{enumerate}
+
+\item \textbf{and} 5.
+
+\begin{enumerate}
+
+\item \textbf{False.} From the corollary, T is 1-1 if dimV $\leq$ dimW. The dimension of $M_2(\mathbb{R})$ is 4 and the dimension of $\mathbb{R}^3$ is 3, so it does not satisfy this relationship.
+
+\begin{enumerate}
+
+\item Stays false.
+
+\item Adding the condition that T is onto will make it true. Since in this question V has dimension of 4 and W has dimension of 3, there will definitely exist some T that will be onto. This is given by the corollary that if T is onto, then dimV $\geq$ dimW.
+
+\end{enumerate}
+
+\item \textbf{True.} From the corollary, T is 1-1 if dimV $\leq$ dimW. The dimension of $\mathbb{R}^3$ is 3 and the dimension of $M_2(\mathbb{R})$ is 4, so this relationship is satisfied.
+
+\item \textbf{True.} An example is mapping any matrix to the zero matrix: $\left(\begin{array}{cc} a & b \\ c & d \end{array}\right) \rightarrow \left(\begin{array}{cc} 0 & 0 \\ 0 & 0 \end{array}\right)$. Clearly, this relationship is not 1-1 since more than one matrix maps to the 0 matrix, and this relationship is not onto, because matrices cannot be mapped to anything other than the 0 matrix.
+
+\item \textbf{False.} From the corollary, if dimV $=$ dimW, and T is 1-1, then it must be onto. In this scenario, the dimension of $M_2(\mathbb{R})$ is 4, and the dimension of $\mathbb{R}_3[x]$ is 4. Since the dimensions are equal, and we are given that it is 1-1, it must be onto. However there is a contradiction because this question asks that it is not onto.
+
+\begin{enumerate}
+
+\item Stays false.
+
+\item Adding the condition that T is onto makes this statement true. This is because V has a dimension of 4, and W has a dimension of 3. We know from the corollary if dimV $>$ dimW, then there must be a possible T that is onto.
+
+\end{enumerate}
+
+\item \textbf{True.} From the corollaries, T is onto if dimV $\geq$ dimW, and T is 1-1 if dimV $\leq$ dimW. Then the equality holds that if dimV $>$ dimW, T is onto and not 1-1. In this scenario, the dimension of V is 4, and the dimension of W is 3. Then there are indeed many examples for T that are onto and not 1-1.
+
+\item \textbf{False.} T is onto if and only if the image of V is equal to W. In this scenario, the dimension of V is equal to 3, while the dimension of W is equal to 4. Clearly, the image of V cannot equal to W because its dimension is less than that of W. 
+
+\begin{enumerate}
+
+\item Since in this case, dimV $<$ dimW, we know that T could definitely be 1-1.
+
+\item Stays false.
+
+\end{enumerate}
+
+\item \textbf{True.} An example is mapping the matrix to the zero vector: $\left(\begin{array}{cc} a & b \\ c & d \end{array}\right) \rightarrow \left(\begin{array}{c} 0 \\ 0 \\ 0\end{array}\right)$. This is not onto because nothing outside of zero is mapped to, and this is not 1-1 since all matrices are mapped to the 0 vector.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

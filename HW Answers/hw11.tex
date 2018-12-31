@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[left=2.75cm, right=2.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{systeme}
+\title{\large{\vspace{-1.0cm}MATH-1564, K1, TA: Sam, Instructor: Nitzan, Sigal Shahaf \\ HW11 ; Alexander Guo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\vspace{-1.5cm}
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item $\Phi \circ L:$ Not defined. Co-domain of $L$ does not match domain of $\Phi$.
+
+\item $L \circ \Phi:$ Well defined. Domain is $\mathbb{R}^3$, co-domaini is $\mathbb{R}^2$.
+
+\item $T^2_A:$ Well defined. Domain is $\mathbb{R}^2$, co-domain is $\mathbb{R}^2$.
+
+\item $S \circ T_A:$ Not defined. Co-domain of $T_A$ does not match domain of $S$.
+
+\item $T_A \circ S:$ Well defined. Domain is $M_2(\mathbb{R})$, co-domain is $\mathbb{R}^2$.
+
+\item $\Phi \circ T_A:$ Not defined. Co-domain of $T_A$ does not match domain of $\Phi$.
+
+\item $T^2_A \circ S:$ Well defined. Domain is $M_2(\mathbb{R})$, co-domain is $\mathbb{R}^2$.
+
+\item $T_A \circ L \circ \Phi:$ Well defined. Domain is $\mathbb{R}^3$, co-domain is $\mathbb{R}^2$.
+
+\end{enumerate}
+
+\item Skip this question.
+
+\item
+
+\begin{enumerate}
+
+\item Rotation $\pi/4$ radians counterclockwise is given by multiplying $\left(\begin{array}{cc} \cos{\pi/4} & -\sin{\pi/4} \\ \sin{\pi/4} & \cos{\pi/4} \end{array}\right)$. $S_2$ can be found by multiplying $\left(\begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array}\right)$. Finally, rotation $\pi/4$ radians clockwise is given by multiplying $\left(\begin{array}{cc} \cos{\pi/4} & \sin{\pi/4} \\ -\sin{\pi/4} & \cos{\pi/4} \end{array}\right)$. So, we can represent $S_3 \circ S_2 \circ S_1$ by multiplying the three matrices. You end up with $\left(\begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array}\right)$. This could be inferred without all the work.
+
+\item We learned in class that we can represent all these linear transformations in coordinates. For $\Phi$, the matrix representing this transformation is $\left(\begin{array}{ccc} 1 & 1 & 0 \\ 1 & -2 & 1 \\ 0 & 1 & -3 \\ 1 & 1 & 1 \end{array}\right)$. For $L$, its transformation is $\left(\begin{array}{cccc} 0 & 1 & 3 & 7 \\ 0 & 1 & 0 & 0 \end{array}\right)$. Then, it is given that $T_A$ multiplies by a specified matrix. So, we multiply each consecutive matrix to the left. Thus, the final matrix is equal to $\left(\begin{array}{ccc} 17 & 14 & -1 \\ 6 & 12 & -3 \end{array}\right)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item We can use the theorem that states if we find a basis for $\mathbb{R}_2[x]$, and some arbitrary elements in $M_2(\mathbb{R})$, there exists a unique linear transformation. Well, we are given that $1 -x + 2x^2$ maps to $\left(\begin{array}{cc} 0 & 0 \\ 0 & 0 \end{array}\right)$, lets say that $x$ maps to $\left(\begin{array}{cc} 1 & 1 \\ 0 & 1 \end{array}\right)$ and finally we chose some $x^2$ that will map to an arbitrary matrix. Since $1 - x + 2x^2, x, x^2$ are linearly independent, and their dimension is 3, they are a basis for $\mathbb{R}_2[x]$. Because each of them maps to a unique element in the co-domain, there exists a linear transformation given by the formula.
+
+\item Skip this question.
+
+\item We can construct such a linear transformation given as $\left(\begin{array}{c} a \\ b \\ c \end{array}\right) \rightarrow \left(\begin{array}{c} a + b + c \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right)$. We know that from what we are given, kerT = span$\left(\left(\begin{array}{c}1 \\ 0 \\ -1 \end{array}\right), \left(\begin{array}{c} 0 \\ 1 \\ -1 \end{array}\right)\right)$. Since these two vectors are clearly in the kernel, it follows that their span is also in the kernel. Additionally, we know that T cannot have a kernel that has a dimension greater than 2, because if we add in $\left(\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right)$ which is linearly independent, it is not contained in the kernel. Therefore, the kernel has a maximum dimension of 2, which is given by the span of the two vectors. We are then certain that this linear transformation is valid.
+
+\item Skip this question.
+
+\item There indeed exists an isomorphism. Since U has a basis of $(x,1+x^2,2+x^3)$, we can write our linear transformation as $(a(x) + b(1+x) + c(2+x^3)) \mapsto (a + bx + cx^2)$. This is indeed isomorphic.
+
+\item Skip this question.
+
+\item We can use the dimension formula, dimV = dim(kerT) + dim(imT). From the condition in the question, we have dimV = 2dim(imT) + 1 + dim(imT) $\rightarrow$ 3 = 3dim(imT) $\rightarrow$ dim(imT) = 1. With this, we also know dim(kerT) = 3. A linear transformation that satisfies these properties is the following: $\left(\begin{array}{c} a \\ b \\ c \\ d \end{array}\right) \mapsto \left(\begin{array}{c} a + b + c + d \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 \end{array}\right)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Such a linear transformation exists. An example linear transformation is to take the bottom most non zero element and to turn it into 0. For example: $\left(\begin{array}{c} a \\ b \\ c \end{array}\right) \mapsto \left(\begin{array}{c} a \\ b \\ 0 \end{array}\right)$. It is then true that there exists such a v (non-trivial) such that Tv = 0. For example, $v = \left(\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right)$.
+
+\item Let y $\in$ imT. There exists $x \in V$ such that $Tx = y$. Consider the fact that we are given $TTT(x) = 0$. Then, we can rewrite this as $T^2(Tx) = T^2(y) = 0$. Thus, it is evident that y is in ker($T^2$). Therefore, ImT $\subseteq$ ker$T^2$. Similarly, let y $\in$ im$T^2$. There exists some $x \in V$ such that $T^2x = y$. Again consider the fact that we are given $TTT(x) = 0$. Then, we can rewrite this as $T(T^2x) = T(y) = 0$. Thus, y is also in ker($T$). Therefore, Im$T^2$ $\subseteq$ ker$T$.
+
+\item Let x $\in$ kerT. Then, Tx = 0. Similarly, T(Tx) = T(0) = 0. Then, x $\in$ ker$T^2$. Also, since $T^2(Tx) = 0$, but $T(Tx) \neq 0$, it is evident that ker$T^2$ $\neq$ ker$T$.
+
+\item The dimension of the kernel of T cannot be equal to 0, because we are given that $T^2 \neq 0$, and $T(T(0)) = T(0) = 0$. Thus, for the kernel of T to only contain the zero vector would be incorrect. Additionally, the kernel of T cannot have a dimension of 2 and above. This is because it is a subset of ker$T^2$ and not equal to ker$T^2$, so ker$T^2$ would have at least a dimension of 3. Using the dimension formula dimV = dim(ker$T^2$) + dim(im$T^2$), dim(im$T^2$) = 0. This is obviously not true since we are given that the image of $T^2 \neq 0$. Thus, the dimension of the kernel of T can only be equal to 1.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item \textbf{True.} Suppose $u,v \in V$, and we want to show that $T(u) = T(v)$ implies $u = v$. $S(T(u)) = S \circ T(u) = u = S(T(v)) = S \circ T(v) = v$. Therefore, T is 1-1.
+
+\item \textbf{False.} For example, suppose that T maps $\left(\begin{array}{c} a \\ b \end{array}\right)$ to $\left(\begin{array}{c} a \\ b \\ 0 \end{array}\right)$ and S maps $\left(\begin{array}{c} a \\ b \\ c \end{array}\right)$ to $\left(\begin{array}{c} a \\ b \end{array}\right)$. It is clear that $S \circ T = id_v$, but S is not 1-1.
+
+\item \textbf{False.} Look at the example above. The dimension of V was 2, while the dimension of W was 3. dimW $\neq$ dimV.
+
+\item \textbf{True.} Assume that dimW = dimV. Let $v_1,...,v_n$ be a basis for V, and let $w_1,...,w_n$ be a basis for W. We proved in class that we can define $S : W \mapsto V$ as a unique linear transformation such that $S(w_i) =  v_i$. We claim that this is an isormorphism if it is both one to one and onto. To prove that it is 1-1, suppose that $S(v) = 0$ for $v \in V$. Then, for $a \in \mathbb{R}$, $v = a_1 v_1 + ... + a_n v_n$. Then, $S(a_1 v_1 + ... + a_n v_n) = a_1 w_1 + ... + a_n w_n = 0$. Since we know that $w_1,...,w_n$ are a basis, $a_1,...,a_n$ are equal to 0. This would mean that v is only equal to 0, and therefore this new linear transformation is 1-1. Now, we want to prove that S is onto. First, we define $v \in V$ again equal to $a_1 v_1 + ... + a_n v_n$. Also define $w \in W$ equal to $a_1 w_1 + ... + a_n w_n$. Then, we want to show that for every $v \in V$ there exists $w \in W$ so that $S(w) = v$. Rewrite this as $S(a_1 w_1 + ... + a_n w_n) = a_1 v_1 + ... + a_n v_n = v$. We thus proved that this linear transformation is onto.
+
+\item \textbf{True.} From the corollaries that we learned in class, since we already proved that T is 1-1, we know that dimV $\leq$ dimW. Recall that T is onto if dimV $\geq$ dimW. So, T is NOT onto if $dimV < dimW$. For T to satisfy both of these conditions, the overlapping inequality would then be $dimV < dimW$. This suggests that $dimV \neq dimW$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item $[T]^B_E = \left(\begin{array}{cccc} 0 & 1 & 2 & 3 \\ 0 & 0 & 2 & 6 \\ 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right)$, and $[T]^B_B = \left(\begin{array}{cccc} 0 & 1 & 0 & 0 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right)$.
+
+\item Skip this one.
+
+\item $[S]^E_E = \left(\begin{array}{cccc} 1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1 \end{array}\right)$, and $[S]^B_B = \left(\begin{array}{cccc}  1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 3 \\ 0 & 0 & 1 & 3 \\ 0 & 0 & 0 & 1 \end{array}\right)$.
+
+\item Skip this one.
+
+\item $[T]^B_B [S]^B_B = [T \circ S]^B_B = \left(\begin{array}{cccc} 0 & 1 & 2 & 3 \\ 0 & 0 & 2 & 6 \\ 0 & 0 & 0 & 3 \\ 0 & 0 & 0 & 0 \end{array}\right)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item From question 3 part 2, we figured out that the matrix for the transformation L was $\left(\begin{array}{cccc} 0 & 1 & 3 & 7 \\ 0 & 1 & 0 & 0 \end{array}\right)$. Now, recall that we can now determine what the kernel is by doing $([L]|0)$ and get the image by determining the colspace of the matrix. Following these algorithms that we have already learned, the basis for the kernel is equal to $(1, -\frac{7}{3} x^2 + x^3)$.
+\item Skip this one.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Let $w \in W$ be an arbitrary matrix that is contained in the given vector space: $\left(\begin{array}{cc} -d & b \\ c & d \end{array}\right)$. Skipping the computation, Lw = $\left(\begin{array}{cc} b-c & -2d \\ 2d & c-b \end{array}\right)$. In this scenario, it is true that $b - c + c - b = 0$. Therefore, L indeed acts from W to W.
+
+\item $\left(\left(\begin{array}{cc} -1 & 0 \\ 0 & 1 \end{array}\right), \left(\begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array}\right)\right)$.
+
+\item $[L]^B_B = \left(\begin{array}{ccc} 0 & -1 & 1 \\ -2 & 0 & 0 \\ 2 & 0 & 0 \end{array}\right)$
+
+\item For quick reference, the RREF of the matrix above is $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 0 \end{array}\right)$. Using the same algorithm for determining the kernel and image, the basis for the kernel is: $\left(\begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array}\right)$, and the basis for the image is: $\left(\begin{array}{cc} -1 & 0 \\ 0 & 1 \end{array}\right), \left(\begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array}\right)$.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Firstly, we know this linear transformation satisfies dimV = dimW. Next, we want to prove that it is both one to one and onto. To do this, we can just prove one of them which would imply the other, thus resulting in an isomorphism. For every polynomial $p \in \mathbb{R}_2[x]$ Let us represent $Sp$ as the following: $\left(\begin{array}{c} a \\ a + b + c \\ a + 2b + 4c \end{array}\right)$. If we form this linear system into a matrix and take its RREF, it becomes $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array}\right)$. Since there are no free variables, we can be sure that every item in the image has only one preimage. Thus, from a theorem we learned in class, because dimV = dimW and it is one to one, it is also an isomorphism
+
+\item Using the standard basis, we can calculate $[S]^B_C = \left(\begin{array}{ccc} 1 & 0 & 0 \\ 1 & 1 & 1 \\ 1 & 2 & 4 \end{array}\right)$. We proved in class that $([S]^B_C)^{-1} = [S^{-1}]^C_B$. Thus, the inverse is $\left(\begin{array}{ccc} 1 & 0 & 0 \\ 0.5 & 2 & -0.5 \\ -1.5 & -1 & 0.5 \end{array}\right)$. We then apply multiplication by $\left(\begin{array}{c} a \\ b \\ c \end{array}\right)$ and we get that the inverse linear transformation $\left(\begin{array}{c} a \\ b \\ c \end{array}\right) \rightarrow a + (0.5a + 2b -0.5c)x + (-1.5a -b + 0.5c)x^2$ 
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item $[id]^B_E = \left(\begin{array}{ccc} 1 & 0 & 1 \\ 1 & 1 & 0 \\ 0 & 1 & 1 \end{array}\right)$, $[id]^C_E = \left(\begin{array}{ccc} 1 & 2 & 1 \\ 2 & 1 & 0 \\ -1 & 0 & 3 \end{array}\right)$, $[id]^E_B = \left(\begin{array}{ccc} 0.5 & 0.5 & -0.5 \\ -0.5 & 0.5 & 0.5 \\ 0.5 & -0.5 & 0.5 \end{array}\right)$, $[id]^E_C = \left(\begin{array}{ccc} -\frac{3}{8} & \frac{3}{4} & \frac{1}{8} \\ \frac{3}{4} & -\frac{1}{2} & -\frac{1}{4} \\ -\frac{1}{8} & \frac{1}{4} & \frac{3}{8} \end{array}\right)$, $[id]^B_C = \left(\begin{array}{ccc} \frac{3}{8} & \frac{7}{8} & -\frac{1}{4} \\ \frac{1}{4} & -\frac{3}{4} & \frac{1}{2} \\ \frac{1}{8} & \frac{5}{8} & \frac{1}{4} \end{array}\right)$, $[id]^C_B = \left(\begin{array}{ccc} 2 & \frac{3}{2} & -1 \\ 0 & -\frac{1}{2} & 1 \\ -1 & \frac{1}{2} & 2 \end{array}\right)$
+
+\item Skip this one.
+
+\item $[id]^B_C = \left(\begin{array}{ccc} 1 & -1 & 0 \\ 0 & 0.5 & -0.5 \\ 0 & 0.5 & 0.5 \end{array}\right)$, $[id]^C_B = \left(\begin{array}{ccc} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & -1 & 1 \end{array}\right)$. $[L]_C = \left(\begin{array}{ccc} -2 & 0 & -2 \\ 2 & 2 & 2 \\ 0 & 0 & 0 \end{array}\right)$, $[L]_B = \left(\begin{array}{ccc} 0 & 1 & -1 \\ 2 & 0 & 0 \\ -2 & 0 & 0 \end{array}\right)$. If we perform the calculations, we can see that both sides are equal.
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item We know that $[id]^B_C = \left(\begin{array}{ccc} [v_1]_C & [v_2]_C & [v_3]_C \end{array}\right)$. So, using the given matrix and our arbitrary matrix, we can rewrite the following: $v_1 = 2w_1 + w_2 + 3w_3, v_2 = 5w_3, v_3 = -2w_1 + 2w_3$. However, $w_1 = \frac{-0.4v_2 + v_3}{-2}$. So, this is not linearly independent.
+
+\item From a theorem, we know that we can take the inverse to be $([id]^B_C)^{-1} = [id^{-1}]^C_B$, thus, by definition, $[id^{-1}]^C_B = \left(\begin{array}{ccc} [w_1]_B & [w_2]_B & [w_3]_B \end{array}\right)$. This is also equal to the inverse $\left(\begin{array}{ccc} 0 & 1 & 0 \\ 0.2 & -1 & 0.2 \\ -0.5 & 1 & 0 \end{array}\right)$. Thus, from this equation, it is evident that $w_2 = v_1 + v_3 - v_2$.
+
+\item According to the above items, $[w_1]_B = \left(\begin{array}{c} 0 \\ 0.2 \\ -0.5 \end{array}\right)$.
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
